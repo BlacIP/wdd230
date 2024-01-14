@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f4f4f4;
+    line-height: 1.6;
+    width: 700px;
+    margin: auto
+}
+
+header {
+    background-color: #005b96;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 100px auto ;
+    align-items: center;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    border-radius: 5%; 
+    margin: 20px;
+    margin-left: 50px;
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    padding-left: 50PX;
+}
+
+nav {
+    background-color: #01050a; 
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin-top: 20px;
+    max-width: 800px; 
+    margin-left: auto; 
+    margin-right: auto;
+    gap: 20px; 
+}
+
+main h2{
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #6e6e6e80; 
+}
+
+.card {
+    background-color: #005b96; 
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.card h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    border-bottom: 1px solid #ffffff80; 
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px; 
+}
+
+footer {
+    background-color: #005b96; 
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p#lastModified {
+    font-style: italic;
+}
+
+@media only screen and (max-width: 600px) {
+    /* Responsive adjustments for mobile */
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        width: 95%;
+        padding: 0 2.5%; /* Ensure some space at the sides on small screens */
+    }
+}
