@@ -4,15 +4,21 @@ body {
     font-family: 'Open Sans', sans-serif;
     background: #f4f4f4;
     line-height: 1.6;
-    width: 900px;
-    margin: auto
+    /* width: 900px; */
+     /* margin: auto */
+} 
+
+header, footer, main {
+	max-width: 66em;
+	margin: 0 auto;
 }
 
 header {
     background-color: #005b96;
     color: white;
     text-align: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    /* margin: auto; */
 }
 
 header h1 {
@@ -23,9 +29,9 @@ header h1 {
 
 .main-card {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     margin-top: 20px;
-    width: 900px;
+    /* width: 900px; */
     justify-items: center;
 }
 
@@ -74,7 +80,7 @@ footer {
     background-color: #005b96; 
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
     margin-top: 20px;
 }
 

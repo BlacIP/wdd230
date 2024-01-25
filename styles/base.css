@@ -82,8 +82,19 @@ main h2{
 
 ul {
     list-style-type: none;
-    padding-left: 20px; 
+    margin: 0;
+    padding: 0%;
 }
+li a{
+    text-decoration: none;
+    color: #98c3df;
+}
+
+li a:hover{
+    color: #49b6fe;
+}
+
+
 
 footer {
     background-color: #005b96; 
