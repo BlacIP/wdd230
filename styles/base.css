@@ -47,7 +47,7 @@ nav a {
 
 main {
     display: grid;
-    grid-template-columns: 1fr 300px; /* Two columns on larger screens */
+    grid-template-columns: 1fr 300px;
     justify-content: center;
     margin-top: 20px;
     max-width: 800px;
