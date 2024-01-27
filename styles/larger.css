@@ -1,5 +1,4 @@
 @media only screen and (max-width: 600px) {
-    /* Responsive adjustments for mobile */
     nav a {
         display: flex;
         justify-content: space-around;
@@ -7,9 +6,62 @@
     }
 
     main {
-        display: block; /* Switch to single column on mobile */
+        display: block;
         width: 95%;
         padding: 0 2.5%;
         gap: 60px;
     }
+
+    
+    #menu {
+        display: block;
+        cursor: pointer;
+        font-size: 25px;
+        font-weight: bold;
+        border: 0;
+        background: none;
+        color: #ffffff;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    #menu::before {
+        content: "☰";
+    }
+      
+    nav {
+        display: none; 
+    }
+    
+    nav.open {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #menu.open::before {
+        content: 'x';
+    }
+
+    iframe {
+        width: 90%;
+    }
 }
+    
+@media only screen and (min-width: 601px) {
+    #menu {
+         display: none;
+    }
+    /* #menu {
+        font-size: 1.5rem;
+        border: 0;
+        background: none;
+        color: #000;
+         position: absolute;
+        top: 1rem;
+        right: 1rem;
+    } */
+
+}
+
+
