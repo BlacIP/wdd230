@@ -4,8 +4,6 @@ body {
     font-family: 'Open Sans', sans-serif;
     background: #f4f4f4;
     line-height: 1.6;
-    /* width: 900px; */
-     /* margin: auto */
 } 
 
 header, footer, main {
@@ -17,8 +15,6 @@ header {
     background-color: #005b96;
     color: white;
     text-align: center;
-    /* margin-top: 20px; */
-    /* margin: auto; */
 }
 
 header h1 {
@@ -31,7 +27,6 @@ header h1 {
     display: grid;
     grid-template-columns: 1fr;
     margin-top: 20px;
-    /* width: 900px; */
     justify-items: center;
 }
 
