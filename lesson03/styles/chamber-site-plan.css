@@ -69,4 +69,92 @@ main {
     /* margin-bottom: 20px; */
     margin-top: 0;
 }
+.color-scheme {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 40px;
+}
+
+.color-scheme section{
+    color: #968900;
+    border-color: #f4f4f4;
+    border-style: solid;
+    width: 10px;
+    gap: 5px;
+}
+
+
+footer {
+    background-color: #005b96; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p#lastModified {
+    font-style: italic;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    nav a {
+        display: flex;
+        justify-content: space-around;
+        margin: 10px 0;
+    }
+
+    main {
+        display: block;
+        width: 95%;
+        padding: 0 2.5%;
+        gap: 60px;
+    }
+
+    
+    #menu {
+        display: block;
+        cursor: pointer;
+        font-size: 25px;
+        font-weight: bold;
+        border: 0;
+        background: none;
+        color: #ffffff;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    #menu::before {
+        content: "☰";
+    }
+      
+    nav {
+        display: none; 
+    }
+    
+    nav.open {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #menu.open::before {
+        content: 'x';
+    }
+}
+    
+@media only screen and (min-width: 601px) {
+    #menu {
+         display: none;
+    }
+
+}
+
+
 
