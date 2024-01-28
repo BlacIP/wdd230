@@ -23,6 +23,12 @@ header h1 {
     margin-right: 20px;
 }
 
+nav {
+    background-color: #01050a; 
+    padding: 10px 0;
+    text-align: center;
+}
+
 nav a {
     color: white;
     text-decoration: none;
@@ -63,3 +69,4 @@ main {
     /* margin-bottom: 20px; */
     margin-top: 0;
 }
+
