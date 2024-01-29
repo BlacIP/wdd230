@@ -65,22 +65,50 @@ main {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     border-bottom: 1px solid #ffffff80; 
-    /* padding-bottom: 10px; */
-    /* margin-bottom: 20px; */
     margin-top: 0;
+}
+.card img{
+    width: 100%;
 }
 .color-scheme {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 40px;
+    height: 150px;
+    gap: 10px;
 }
 
-.color-scheme section{
-    color: #968900;
+
+.primary{
+    background-color: #005b96;
+    width: 100%;
     border-color: #f4f4f4;
-    border-style: solid;
-    width: 10px;
-    gap: 5px;
+    border-style: solid; 
+}
+.primary p{
+    padding-left: 10px;
+    margin-top: 80px;
+}
+
+.secondary{
+    background-color: #ffffff;
+    width: 100%;  
+}
+
+.secondary p{
+    color: #005b96; 
+    padding-left: 10px;
+    margin-top: 80px;
+}
+
+.accent{
+    background-color: #fee649;
+    width: 100%; 
+}
+
+.accent p{
+    color: #005b96; 
+    padding-left: 10px;
+    margin-top: 80px;
 }
 
 
