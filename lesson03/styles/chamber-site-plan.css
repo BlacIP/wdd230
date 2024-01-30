@@ -68,27 +68,6 @@ main {
     margin-top: 0;
 }
 
-.wireframe {
-    background-color: #005b96; 
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
-    justify-content: center;
-    margin-bottom: 20px;
-    height: 575.98px;
-    overflow-y: scroll;
-}
-
-.wireframe h2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    border-bottom: 1px solid #ffffff80; 
-    margin-top: 0;
-}
-.wireframe img{
-    width: 100%;
-}
-
 .color-scheme {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -130,6 +109,26 @@ main {
     margin-top: 80px;
 }
 
+.wireframe {
+    background-color: #005b96; 
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 575.98px;
+    overflow-y: scroll;
+}
+
+.wireframe h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    border-bottom: 1px solid #ffffff80; 
+    margin-top: 0;
+}
+.wireframe img{
+    width: 100%;
+}
 
 footer {
     background-color: #005b96; 
