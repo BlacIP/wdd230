@@ -68,7 +68,7 @@ main {
     margin-top: 0;
 }
 
-.wireframe {
+.wireframe{
     background-color: #005b96; 
     color: white;
     padding: 20px;
@@ -77,6 +77,7 @@ main {
     margin-bottom: 20px;
     height: 575.98px;
     overflow-y: scroll;
+    
 }
 .wireframe h2 {
     font-family: 'Roboto', sans-serif;
