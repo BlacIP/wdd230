@@ -1,0 +1,80 @@
+/* Mobile view */
+@media screen and (max-width: 768px) {
+    img.hero-image{
+        margin-top: 80px;
+        width: 100%
+    }
+    h1{
+        top: 50px;
+    }
+    span{
+        font-size: 20px;
+        margin: 0 1px;
+    }
+    .nav {
+        display: none;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+        position: fixed;
+        background-color: var(--background-color);
+        top: 60px; /* Adjust based on your header's height */
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    nav {
+        background-color: var(--background-color); 
+        padding: 30px 0 0 0;
+        width: 100%;
+    }
+    nav img{
+        width: 80px;
+        padding-left: 10px ;
+    }
+    #menu {
+        display: block;
+        background: var(--background-color);
+        color: var(--text-color);
+        border: none;
+        padding: 10px;
+        width: 40px; /* Adjust based on your preference */
+        height: 40px; /* Adjust based on your preference */
+        position: fixed;
+        top: 20px; /* Adjust based on your preference */
+        right: 10px; /* Adjust based on your preference */
+        cursor: pointer;
+        z-index: 1;
+        font-size: 30px;
+    }
+    #menu::before {
+        content: "☰";
+    }
+    #menu.open::before {
+        content: 'x';
+    }
+
+    #menu.open + .nav {
+        display: grid;
+    }
+
+    .nav.open {
+        display: grid;
+    }
+   
+
+    .hero-image, .button, .join a {
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    h1 {
+        font-size: 40px; /* Smaller font size for mobile */
+        top: 150px; /* Adjust based on your hero image */
+    }
+
+    .event-weather, .add {
+        grid-template-columns: 1fr;
+    }
+}
