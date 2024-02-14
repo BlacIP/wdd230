@@ -45,3 +45,16 @@ hamButton.addEventListener('click', () => {
 	navigation.classList.toggle('open');
 	hamButton.classList.toggle('open');
 });
+
+const modeSwitch = document.querySelector("#modeSwitch");
+const mainContent = document.querySelector("#mainContent");
+
+modeSwitch.addEventListener("change", () => {
+  if (modeSwitch.checked) {
+    // Dark mode
+    mainContent.classList.add("dark-mode");
+  } else {
+    // Light mode
+    mainContent.classList.remove("dark-mode");
+  }
+});

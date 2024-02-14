@@ -3,11 +3,14 @@
 :root{
     --background-color: #005b96;
     --text-color: #ffffff;
+    --alternative-white: #fffee9;
     --accent-color: #fee649;
     --allternative-bg-color: #65b3e7;
+    --night-mode-black: #060606;
+    --alternative-night-mode: #121212;
 }
 
-body {
+#mainContent {
     font-family: 'Roboto', sans-serif;
     background: var(--text-color);
     line-height: 1.6;
@@ -41,19 +44,21 @@ h1 span {
     animation: fadeIn 0.3s forwards;
     margin: 0 3px;
 }
+#menu {
+    display: none;
+}
 
 .button{
     display: inline-block;
     font-size: 30px;
     font-weight: bold;
-    width: 250px;
-    padding: 10px 5px;
+    width: 200px;
     background-color: #ffffff32;
     color: var(--text-color);
     border: 2px;
     border-color: var(--text-color);
     border-style: solid;
-    border-radius: 20px;
+    border-radius: 15px;
     position: absolute;
     top: 600px;
     left: 50%;
@@ -76,6 +81,7 @@ nav {
     width: 100%;
     display: grid;
     grid-template-columns:  6% 1fr;
+    color: var(--text-color);
 }
 nav img{
     width: 100%;
@@ -83,10 +89,11 @@ nav img{
 }
 .nav{
    display: grid;
-   grid-template-columns: 3fr 1fr;
+   grid-template-columns: 3fr 1fr 80px;
    align-items: center;
    justify-items: center;
    padding-left: 200px;
+   padding-right: 10px;
 }
 .nav a {
     color: var(--text-color);
@@ -141,8 +148,8 @@ main {
 }
 
 .card {
-    background-color: #005b96; 
-    color: white;
+    background-color: var(--background-color); 
+    color: var(--text-color);
     padding: 20px;
     border-radius: 5px;
     justify-content: center;
@@ -152,7 +159,7 @@ main {
 .card h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    border-bottom: 1px solid #ffffff80; 
+    border-bottom: 1px solid var(--alternative-white); 
     padding-bottom: 10px;
     margin-top: 0;
     margin-bottom: 20px;
@@ -179,6 +186,7 @@ main {
 .add .card p a:hover{
     color: var(--allternative-bg-color);
 }
+
 footer{
     width: 100%;
     display: grid;
@@ -210,4 +218,113 @@ iframe{
     align-items: center;
     justify-content: center;
     gap: 5px;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    z-index: 1;
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--alternative-white);
+    transition: .4s;
+  }
+  .slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    transition: .4s;
+    background-image: url('../images/moon-fill.svg');
+    background-size: cover;
+  }
+  input:checked + .slider::before {
+    background-image: url('../images/sun-fill.svg');
+}
+  input:checked + .slider {
+    background-color:var(--allternative-bg-color);
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--allternative-bg-color);
+  }
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  .slider.round {
+    border-radius: 34px;
+  }
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+/* dark-mode */
+
+.dark-mode .card {
+    background-color: var(--night-mode-black);
+    color: var(--alternative-white);
+  }
+  .dark-mode footer {
+    background-color: var(--night-mode-black);
+    color: var(--alternative-white);
+  }
+  .dark-mode nav {
+    background-color: var(--night-mode-black);
+    color: var(--alternative-white);
+  }
+  .dark-mode .info{
+    background-color: var(--alternative-night-mode);
+    color: var(--alternative-white);
+  }
+  .dark-mode .address{
+    color: var(--alternative-white);
+  }
+  .dark-mode .button{
+    border-color: var(--alternative-white);
+    color: var(--alternative-white);
+  }
+  .dark-mode .button:hover{
+    background-color: var(--night-mode-black);
+    color: var(--alternative-white);
+    border-color: var(--night-mode-black);
+  }
+  .dark-mode .nav a{
+    color: var(--alternative-white);
+  }
+  .dark-mode .nav a:hover{
+    color: var(--allternative-bg-color);
+  }
+  .dark-mode .join{
+    background-color: var(--alternative-white);
+    border-color: var(--alternative-white);
+}
+.dark-mode .join a{
+    color: var(--night-mode-black);
+}
+.dark-mode .join:hover {
+    background-color: var(--night-mode-black);
+    border-color: var(--alternative-white)
+}
+.dark-mode .join:hover a{
+    color: var(--alternative-white);
+}
+.dark-mode{
+    background-color: var(--alternative-night-mode);
 }
