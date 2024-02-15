@@ -325,6 +325,9 @@ iframe{
 .dark-mode .join:hover a{
     color: var(--alternative-white);
 }
-.dark-mode{
-    background-color: var(--alternative-night-mode);
+.dark-mode main{
+    background: var(--alternative-night-mode);
+}
+.dark-mode header{
+    background: var(--alternative-night-mode);
 }
