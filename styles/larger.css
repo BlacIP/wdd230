@@ -8,7 +8,6 @@
     main {
         display: block;
         width: 100%;
-        /* padding: 0 2.5%; */
         gap: 60px;
     }
     section{
@@ -22,7 +21,6 @@
         height: auto;
         border-radius: 5%; 
         margin: 20px;
-        /* margin-left: 50px; */
     }
     header h1 {
         font-family: 'Roboto', sans-serif;
@@ -33,13 +31,6 @@
     }
 
     .hero-label{
-        position: absolute;
-        top: 200px;
-        left:15%;
-        padding: 4px 15px;
-
-    }
-    .hero-label h2{
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-weight: lighter;
         padding: 0;
@@ -47,6 +38,10 @@
         border-bottom: none;
         font-style: oblique;
         color: #ffffff;
+        position: absolute;
+        top: 200px;
+        left:15%;
+        padding: 4px 15px;
         
     }
 
