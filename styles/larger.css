@@ -7,9 +7,47 @@
 
     main {
         display: block;
-        width: 95%;
-        padding: 0 2.5%;
+        width: 100%;
+        /* padding: 0 2.5%; */
         gap: 60px;
+    }
+    section{
+        margin: 0 5px;
+    }
+    header{
+        margin: 0;
+    }
+    header img {
+        width: 100px;
+        height: auto;
+        border-radius: 5%; 
+        margin: 20px;
+        /* margin-left: 50px; */
+    }
+    header h1 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 7200;
+        font-size: 20px;
+        padding-left: 20PX;
+        margin-right: 20px;
+    }
+
+    .hero-label{
+        position: absolute;
+        top: 200px;
+        left:15%;
+        padding: 4px 15px;
+
+    }
+    .hero-label h2{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: lighter;
+        padding: 0;
+        margin: 0;
+        border-bottom: none;
+        font-style: oblique;
+        color: #ffffff;
+        
     }
 
     
@@ -52,6 +90,7 @@
     #menu {
          display: none;
     }
+
 
 }
 
