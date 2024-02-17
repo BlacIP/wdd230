@@ -4,7 +4,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     background: #f4f4f4;
     line-height: 1.6;
-    max-width: 800px;
+    max-width: 900px;
     margin: auto
 }
 
@@ -82,7 +82,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 250px;
     justify-content: center;
-    max-width: 800px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     gap: 20px; 
@@ -152,9 +152,8 @@ footer p#lastModified {
 
 iframe {
     display: block;
-    width: 96%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 97%;
+    margin: 0;
     border-style: solid;
     border-color: #005b96;
     padding: 10px;
