@@ -12,7 +12,6 @@ header {
     background-color: #005b96;
     color: white;
     text-align: center;
-    margin-top: 20px;
     display: grid;
     grid-template-columns: 100px auto ;
     align-items: center;
