@@ -19,10 +19,17 @@
 <body id="mainContent">
     <header> 
         <h1> We are the Continent's Most <br> Vibrant Chamber of Commerce</h1>
-        <img class="hero-image" src="images/lekki-link-bridge.webp" alt="lekk-ikoyi link bridge">
+        <div class="hero-image">
+            <picture>
+                <source srcset="images/wdd230-org--small.webp" media="(min-width: 500px)">
+                <source srcset="images/wdd230-org--Medium.webp" media="(min-width: 1000px)">
+                <img src="images/wdd230-org--Large.webp" alt="hero image" width="1500" height="750">
+            </picture>
+        </div>
         <a class="button" href="join.html">Join</a> 
     </header>
-    <button id= "menu"></button>
+    
+    <button title="menu" id= "menu"></button>
     
    <nav>
     <div>
@@ -38,7 +45,7 @@
             <a href="join.html">Join</a>
         </div>
         <label class="switch" >
-            <input type="checkbox" id="modeSwitch">
+            <input title="input" type="checkbox" id="modeSwitch">
             <span class="slider round"></span>
           </label>
     </div>
@@ -51,6 +58,11 @@
             </div>
             <div class="card">  
                 <h2> Weather</h2>
+                <div id="weather">
+                    <p>Temperature: <span id="temperature">75</span> °F</p>
+                    <p>Wind Speed: <span id="windSpeed">5</span> mph</p>
+                    <p>Wind Chill: <span id="windChill">N/A</span> °F</p>
+                </div>
         
             </div>
         </section>
