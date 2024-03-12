@@ -3,15 +3,7 @@
     "development"
   ],
   "hints": {
-    "compat-api/css": [
-      "default",
-      {
-        "ignore": [
-          "backdrop-filter",
-          "-webkit-text-size-adjust"
-        ]
-      }
-    ],
+    "compat-api/css": "off",
     "disown-opener": "off",
     "compat-api/html": [
       "default",
@@ -26,6 +18,8 @@
       {
         "frame-title": "off"
       }
-    ]
+    ],
+    "meta-charset-utf-8": "off",
+    "meta-viewport": "off"
   }
 }

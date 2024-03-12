@@ -58,3 +58,24 @@ modeSwitch.addEventListener("change", () => {
     mainContent.classList.remove("dark-mode");
   }
 });
+
+const visitsDisplay = document.querySelector(".visits");
+const lastVisitDate = window.localStorage.getItem("lastVisitDate");
+const currentDate = new Date().getTime();
+let message;
+
+if (!lastVisitDate) {
+    message = "Welcome! Let us know if you have any questions.";
+} else {
+    const daysSinceLastVisit = Math.floor((currentDate - new Date(lastVisitDate).getTime()) / (1000 * 60 * 60 * 24));
+    
+    if (daysSinceLastVisit < 1) {
+        message = "Back so soon! Awesome!";
+    } else {
+        message = `You last visited ${daysSinceLastVisit} ${daysSinceLastVisit === 1 ? 'day' : 'days'} ago.`;
+    }
+}
+
+visitsDisplay.textContent = message;
+window.localStorage.setItem("lastVisitDate", new Date().toString());
+

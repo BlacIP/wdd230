@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekki Chamber of Commerce and Industry</title>
+    <meta name="author" content="Boluwatife Adebiyi Omotoyinbo">
+    <meta name="description" content="Lekki Chamber of Commerce and Industry">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="Lekki Chamber of Commerce and Industry">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.istockphoto.com/photo/aerial-street-view-of-lagos-gm1307710890-397895461?phrase=lagos+city&searchscope=image%2Cfilm">
+    <meta property="og:url" content="https://blacip.github.io/wdd230/chamber/">
+</head>
+<body id="mainContent">
+    <header> 
+        <h1> We are the Continent's Most <br> Vibrant Chamber of Commerce</h1>
+        <div class="hero-image">
+            <picture>
+                <source srcset="images/wdd230-org--small.webp" media="(min-width: 500px)">
+                <source srcset="images/wdd230-org--Medium.webp" media="(min-width: 1000px)">
+                <img src="images/wdd230-org--Large.webp" alt="hero image" width="1500" height="750">
+            </picture>
+        </div>
+        <a class="button" href="join.html">Join</a> 
+    </header>
+    
+    <button title="menu" id= "menu"></button>
+    
+   <nav>
+    <div>
+        <a title="logoLink" href="index.html" > <img src="images/lekki-chambers-logo.webp" alt="lekki chambers logo"></a>
+    </div>
+    <div class="nav">
+        <div class="nav-list">
+            <a href="index.html"> Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="discovery.html">Discovery</a>
+        </div>
+        <div class="join">
+            <a href="join.html">Join</a>
+        </div>
+        <label class="switch" >
+            <input title="input" type="checkbox" id="modeSwitch">
+            <span class="slider round"></span>
+          </label>
+    </div>
+    </nav>
+    <main class="discover-main">
+       <section class="side-bar">
+        <div class="events">
+            <h2> Area Info and Statistics</h2>
+            <p>Population : 174,400</p>
+            <p>Area: 415.9 km²</p>
+            <p>Population Density: 419.3/km² </p>
+            <p>Median Income : $45,000</p>
+            <p>Median Age : 35</p>
+            <p>Median Home Price : $250,000</p>
+            <h2>Page Visit Info</h2>
+            <div class="visits"></div>
+        </div>
+        <div id="calendar-container"> </div>
+       </section>
+       <section class="image-gallery">
+        <div class="img">
+            <h2> Ikoyi Link Bridge </h2>
+            <picture>
+                <source srcset="images/ikoyi-link-bridge-small.webp" loading="lazy" media="(min-width: 350px)">
+                <source srcset="images/ikoyi-link-bridge-medium.webp" loading="lazy" media="(min-width: 550px)">
+                <img src="images/ikoyi-link-bridge-large.webp" alt="Ikoyi Bridge" loading="lazy" width="850" height="450">
+            </picture>
+        </div>
+        <div class="img">
+            <h2> Welcome to Lagos Statue </h2>
+            <picture>
+                <source srcset="images/welcome-to-lagos-small.webp" loading="lazy" media="(min-width: 350px)">
+                <source srcset="images/welcome-to-lagos-medium.webp" loading="lazy" media="(min-width: 550px)">
+                <img src="images/welcome-to-lagos-large.webp.webp" alt="Lagos Statue" loading="lazy" width="850" height="450">
+            </picture>
+        </div>
+        <div class="img">
+            <h2> National Arts Thearter </h2>
+            <picture>
+                <source srcset="images/national-arts-thearter-small.webp" loading="lazy" media="(min-width: 350px)">
+                <source srcset="images/national-arts-thearter-medium.webp" loading="lazy" media="(min-width: 550px)">
+                <img src="images/national-arts-thearter-large.webp" alt="National Thearter" loading="lazy" width="850" height="450">
+            </picture>
+        </div>
+        <div class="img">
+            <h2> The First Lagos Catheral Church </h2>
+            <picture>
+                <source srcset="images/first-cathedral-small.webp"  loading="lazy" media="(min-width: 350px)">
+                <source srcset="images/first-cathedral-medium.webp" loading="lazy" media="(min-width: 550px)">
+                <img src="images/first-cathedral-large.webp" alt="Ikoyi Bridge" loading="lazy" width="850" height="450">
+            </picture>
+        </div>
+        <div class="img">
+            <h2> Tafawa Balewa Square </h2>
+            <picture>
+                <source srcset="images/tbs-lagos-small.webp" loading="lazy" media="(min-width: 350px)">
+                <source srcset="images/tbs-lagos-medium.webp" loading="lazy" media="(min-width: 550px)">
+                <img src="images/tbs-lagos-large.webp" alt="Ikoyi Bridge" loading="lazy" width="850" height="450">
+            </picture>
+        </div>
+        <div class="img">
+            <h2> The Lekki Deep Seaport </h2>
+            <picture>
+                <source srcset="images/lekki-seaport-small.webp" loading="lazy" media="(min-width: 350px)">
+                <source srcset="images/lekki-seaport-medium.webp" loading="lazy" media="(min-width: 550px)">
+                <img src="images/lekki-seaport-large.webp" alt="Ikoyi Bridge" loading="lazy" width="850" height="450">
+            </picture>
+        </div>
+       </section>
+    </main>
+    <footer>
+        <section class="address">
+            <div>
+                <img src="images/lekki-chambers-logo.webp" alt="lekki-chambers-logo">
+                 <h2> Lekki Chamber Of Commerce</h2>
+                <p>Lekki Free Trade center, Lagos, Nigeria 
+                <br>P.O Box 10695, Lagos State, Nigeria. 
+                <br>Email: info@lekkichamber.org
+                <br>Tel: +234 (0) 708 5265 374</p>
+            </div>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.8012172769972!2d3.3953149765886215!3d6.546766022889232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8d6ac18094d3%3A0xc91d5e06e9c8688e!2sIyana%20Oworo!5e0!3m2!1sen!2sng!4v1706350890267!5m2!1sen!2sng" title="gogleMap" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <div class="info">
+            <p id="year"></p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/calender.js"></script>
+    
+
+
+</body>
+</html>
