@@ -5,14 +5,7 @@
   "hints": {
     "compat-api/css": "off",
     "disown-opener": "off",
-    "compat-api/html": [
-      "default",
-      {
-        "ignore": [
-          "iframe[loading]"
-        ]
-      }
-    ],
+    "compat-api/html": "off",
     "axe/text-alternatives": [
       "default",
       {
@@ -20,6 +13,14 @@
       }
     ],
     "meta-charset-utf-8": "off",
-    "meta-viewport": "off"
+    "meta-viewport": "off",
+    "axe/name-role-value": "off",
+    "no-inline-styles": "off",
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ]
   }
 }

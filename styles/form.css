@@ -1,0 +1,131 @@
+:root {
+    --primary-color: #005b96;
+    --primary-tone: #067ef6;
+    --secondary-color: #ededed;
+    --error-color: #dc3545;
+    --white: #fff;
+}
+
+.form{
+    margin-top: 20px;
+    display: block;
+    width: 60%;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.login fieldset{
+    border: none;
+    border-radius: 6px;
+    
+}
+
+.login legend{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+
+}
+
+.login label{
+    display: block;
+    padding-top: 1rem;
+    color: var(--primary-color);
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.login label p{
+    margin: 0;
+}
+
+.login label p::after{
+    content: "*";
+    color: var(--error-color);
+}
+.login input[type="text"],
+.login input[type="password"],
+.login input[type="email"] {
+    background-color: var(--secondary-color);
+    display: block;
+    border: solid 2px #efefef;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    appearance: none;
+    
+}
+
+
+.login input.valid {
+    border: solid 2px var(--primary-color);
+    outline: none;
+}
+.login input:required:focus{
+    border: solid 2px  var(--error-color);
+    outline: none;
+}
+
+.login input:required:valid{
+    border: solid 2px  var(--primary-color);
+    outline: none;
+}
+
+.login input[type="submit"]{
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 6px;
+    padding: .8rem;
+    width: 96%;
+    margin: -1rem 2% 2rem 2%;
+    box-shadow: 1px 1px 4px #999;
+    
+}
+.login input[type="submit"]:hover{
+    background: var(--primary-tone);
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: small;
+    margin: 0;
+}
+
+.password-message{
+    font-size: 0.8em; 
+}
+.range{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+#r {
+	width: 100%;
+	margin-bottom: 0;
+}
+
+#rangevalue {
+	font-size: 2rem;
+	color: var(--primary-tone);
+    margin: 0;
+    padding: 0;
+}
+
+#rangevalues {
+	display: flex;
+	width: 100%;
+    gap: 36px;
+}
+
+#rangevalues option {
+	flex: 1 1 auto;
+}

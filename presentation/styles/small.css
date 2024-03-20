@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Roboto&display=swap');
+body {
+	font-family: 'Roboto', Arial, sans-serif;
+}
+header, footer, main, nav, div {
+	max-width: 60em;
+	margin: 0 auto;
+}
+header, footer {
+	background-color: #153e5c;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+}
+section p, section img, section video {
+	padding-left: 15px;
+} 
+section .codingText, section button, section h4 {
+	margin-left: 15px;
+} 
+section {
+	margin-bottom: 50px;
+}
+button {
+	margin-bottom: 20px;
+}
+button:focus {
+    outline: none;
+}
+img {
+	max-width: 100%;
+	height:	auto;
+}
+li {
+	list-style-type: none;
+}
+h1 {
+	font-size: 30px;
+}
+h2 {
+	font-size: 20px;
+}
+h3 {
+	font-size: 16px;
+}
+h4 {
+	color: #ffffff;
+	background-color: #153e5c;	
+	margin: 0;
+	padding: 10px 10px 10px 20px;
+	font-size: 16px;
+}
+.codingText {
+	font-family: 'Cutive Mono', monospace, Arial, sans-serif;
+	font-weight: bold;
+	background-color: #c1cdd5;
+	padding: 15px;
+	border-left: 5px solid #698497;
+	margin-top: 0;
+}
+a {
+	text-decoration: none;
+}
+footer p a {
+	color: #ffffff;
+}
+footer p a:hover {
+	color:  #87aeb4;
+}
+/* navigation area - top */
+nav ul {
+	background-color: #698497;	
+	list-style: none;
+	text-align: center;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+	flex-flow: row wrap;
+}
+nav ul li {
+	flex: 1 1 auto; /* nav buttons span full width*/
+}
+nav a {
+	padding: 15px;
+	display: block;
+	font-size: 16px;
+	color: #000000;
+}
+nav a:hover {
+	background-color: #153e5c;	
+	color: #ffffff;
+}
+.active {
+	background-color: #c1cdd5;
+	border-left: 4px solid #153e5c;
+	border-right: 4px solid #153e5c;
+}
+/* second nav area */
+.secondNavBar {
+	display: flex;
+	border-top: 3px solid #153e5c;
+}
+.secondNavBar button {
+	padding: 8px;
+	border: none;
+	flex: 1 1 auto; /* nav buttons span full width*/
+}
+.secondNavBar button:hover {
+	background-color: #153e5c;	
+	color: #ffffff;
+}
+.highlightTab {
+	background-color: #c1cdd5;	
+}
+/* css coding for animation examples */
+/* Original Id's */
+#exampleOne, #exampleTwo, #exampleFour, #exampleFive, #exampleSix, #exampleSeven, #exampleEight {
+	height: 50px;
+	width: 200px;
+	background-color: #153e5c;
+	border: none;
+}
+#exampleThree, #exampleNine, #exampleTen, #exampleEleven, #exampleTwelve {
+	height: 50px;
+	width: 50px;
+	margin-bottom: 130px;
+	background-color: #153e5c;
+	border: none;
+	position: relative;
+}
+#exampleTimingLinear, #exampleTimingEase, #exampleTimingEaseIn, #exampleTimingEaseOut, #exampleTimingEaseInOut, #exampleTimingbezier, #exampleFillNone, #exampleFillForwards, #exampleFillBackwards, #exampleFillBoth {
+	height: 50px;
+	width: 200px;
+	color: #ffffff;
+	background-color: #153e5c;
+	border: none;
+	position: relative;
+}
+#exampleShorthand {
+	padding:10px;
+	color: #ffffff;
+	background-color: #153e5c;
+	border: none;
+	position: relative;
+	margin-top: 50px;
+}
+/* added classes */
+.exampleOneAnimation {
+	animation-name: backgroundColorOne;
+	animation-duration: 4s;
+}
+.exampleTwoAnimation {
+	animation-name: backgroundColorFour;
+	animation-duration: 4s;
+}
+.exampleThreeAnimation {
+	animation-name: moveInSquare;
+	animation-duration: 4s;
+}
+.exampleFourAnimation {
+	animation-name: backgroundColorFour;
+	animation-duration: 10s;
+}
+.exampleFiveAnimation {
+	animation-name: backgroundColorOne;
+	animation-duration: 4s;
+	animation-delay: 2s;
+}
+.exampleSixAnimation {
+	animation-name: backgroundColorOne;
+	animation-duration: 4s;
+	animation-delay: -2s;
+}
+.exampleSevenAnimation {
+	animation-name: backgroundColorOne;
+	animation-duration: 4s;
+	animation-iteration-count: 3;
+}
+.exampleEightAnimation {
+	animation-name: backgroundColorOne;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+.exampleNineAnimation {
+	animation-name: moveInSquare;
+	animation-duration: 4s;
+	animation-direction: normal;
+}
+.exampleTenAnimation {
+	animation-name: moveInSquare;
+	animation-duration: 4s;
+	animation-direction: reverse;
+}
+.exampleElevenAnimation {
+	animation-name: moveInSquare;
+	animation-duration: 4s;
+	animation-iteration-count: 2;
+	animation-direction: alternate;
+}
+.exampleTwelveAnimation {
+	animation-name: moveInSquare;
+	animation-duration: 4s;
+	animation-iteration-count: 2;
+	animation-direction: alternate-reverse;
+}
+.exampleTimingLinearAnimation, .exampleTimingEaseAnimation, .exampleTimingEaseInAnimation, .exampleTimingEaseOutAnimation, .exampleTimingEaseInOutAnimation, .exampleTimingbezierAnimation {
+	animation-name: moveToRight;
+	animation-duration: 10s;
+	animation-iteration-count: 3;	
+}
+.exampleTimingLinearAnimation {
+	animation-timing-function: linear;
+}
+.exampleTimingEaseAnimation {
+	animation-timing-function: ease;
+}
+.exampleTimingEaseInAnimation {
+	animation-timing-function: ease-in;
+}
+.exampleTimingEaseOutAnimation {
+	animation-timing-function: ease-out;
+}
+.exampleTimingEaseInOutAnimation {
+	animation-timing-function: ease-in-out;
+}
+.exampleTimingbezierAnimation {
+	animation-timing-function: cubic-bezier(0, 1, 0.5, 0.2);
+}
+.exampleFillNoneAnimation, .exampleFillForwardsAnimation, .exampleFillBackwardsAnimation, .exampleFillBothAnimation {
+	animation-name: moveToRightWithColor;
+	animation-delay: 2s;
+	animation-duration: 4s;
+}
+.exampleFillNoneAnimation {
+	animation-fill-mode: none;
+}
+.exampleFillForwardsAnimation {
+	animation-fill-mode: forwards;
+}
+.exampleFillBackwardsAnimation {
+	animation-fill-mode: backwards;
+}
+.exampleFillBothAnimation {
+	animation-fill-mode: both;
+}
+.exampleShorthandAnimation {
+	animation: youSpinMeRightRound 4s ease-in 2s infinite none;
+}
+/* keyframes */
+@keyframes youSpinMeRightRound {
+	0%   {left: 0px; transform: rotate(0deg);}
+	35%  {background-color:#698497; left: 0px; transform: rotate(20deg);}	
+	65%  {background-color:#153e5c; left: 840px; transform: rotate(0deg);}
+	70%  {left: 840px; transform: rotate(0deg);}
+	100% {background-color:#698497; left: 0px; transform: rotate(-360deg);}
+}
+@keyframes moveToRightWithColor {
+	0%   {background-color: #000000; left:0px;}
+	100% {background-color: #698497; left:750px;}
+}
+@keyframes moveToRight {
+	0%   {left:0px;}
+	100% {left:750px;}
+}
+@keyframes moveInSquare {
+	0%   {background-color:#153e5c; left:0px; top:0px;}
+	25%  {background-color:#ffffff; left:100px; top:0px;}
+	50%  {background-color:#698497; left:100px; top:100px;}
+	75%  {background-color:#000000; left:0px; top:100px;}
+	100% {background-color:#153e5c; left:0px; top:0px;}
+}
+@keyframes backgroundColorOne {
+	0% {background-color: #153e5c;}
+	100% {background-color: #c1cdd5;}
+}
+@keyframes backgroundColorFour {
+	0% {background-color: #153e5c;}
+	25% {background-color: #ffffff;}
+	50% {background-color: #698497;}
+	75% {background-color: #000000;}
+	100% {background-color: #153e5c;}
+}

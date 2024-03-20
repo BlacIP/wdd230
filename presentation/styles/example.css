@@ -1,0 +1,175 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Roboto&display=swap');
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0 auto;
+}
+header {
+  background-color: #153e5c;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+h1 {
+  font-size: 30px;
+}
+a {
+  text-decoration: none;
+}
+/* navigation area - top */
+nav {
+  background-color: #698497;	
+}
+nav ul {
+  max-width: 60em;
+  margin: 0 auto;
+  background-color: #698497;	
+  list-style: none;
+  text-align: center;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+nav ul li {
+  flex: 1 1 auto; /* nav buttons span full width*/
+    list-style-type: none;
+}
+nav a {
+  padding: 15px;
+  display: block;
+  font-size: 16px;
+  color: #000000;
+}
+nav a:hover {
+  background-color: #153e5c;	
+  color: #ffffff;
+}
+.active {
+  background-color: #c1cdd5;
+  border-left: 4px solid #153e5c;
+  border-right: 4px solid #153e5c;
+}
+/* firework code */
+main {
+  margin: 20px auto;
+  width: 1000px;
+  height: 700px;
+  border: 2px solid #000000;
+  background-color: lightblue;
+  position: relative;
+}
+div {
+  position: absolute;
+}
+#trunk {
+  animation: trunk 4s ease-in 0s 1 forwards;
+}
+@keyframes trunk {
+  0% {background-color: rgb(151, 119, 98); height: 1px; width: 1px; left: 500px; top: 700px;}
+  100% {background-color: rgb(71, 30, 3); height: 350px; width: 100px; left: 450px; top: 350px;}
+}
+#topOne {
+  animation: topOne 4s ease-in 4s 1 forwards;
+}
+#topTwo {
+  animation: topTwo 4s ease-in 4s 1 forwards;
+}
+#topThree {
+  animation: topThree 4s ease-in 4s 1 forwards;
+}
+#topFour {
+  animation: topFour 4s ease-in 4s 1 forwards;
+}
+#topFive {
+  animation: topFive 4s ease-in 4s 1 forwards;
+}
+#topSix {
+  animation: topSix 4s ease-in 4s 1 forwards;
+}
+@keyframes topOne {
+  0% {background-color: rgb(104, 151, 98); border-radius: 100px; height: 1px; width: 1px; left: 450px; top: 350px;}
+  100% {background-color: rgb(20, 85, 12); border-radius: 100px; height: 200px; width: 200px; left: 300px; top: 150px;}
+}
+@keyframes topTwo {
+  0% {background-color: rgb(104, 151, 98); border-radius: 100px; height: 1px; width: 1px; left: 550px; top: 350px;}
+  100% {background-color: rgb(20, 85, 12); border-radius: 100px; height: 200px; width: 200px; left: 500px; top: 150px;}
+}
+@keyframes topThree {
+  0% {background-color: rgb(104, 151, 98); border-radius: 100px; height: 1px; width: 1px; left: 550px; top: 300px;}
+  100% {background-color: rgb(20, 85, 12); border-radius: 100px; height: 200px; width: 200px; left: 450px; top: 100px;}
+}
+@keyframes topFour {
+  0% {background-color: rgb(104, 151, 98); border-radius: 100px; height: 1px; width: 1px; left: 450px; top: 300px;}
+  100% {background-color: rgb(20, 85, 12); border-radius: 100px; height: 200px; width: 200px; left: 350px; top: 100px;}
+}
+@keyframes topFive {
+  0% {background-color: rgb(104, 151, 98); border-radius: 100px; height: 1px; width: 1px; left: 550px; top: 400px;}
+  100% {background-color: rgb(20, 85, 12); border-radius: 100px; height: 200px; width: 200px; left: 450px; top: 200px;}
+}
+@keyframes topSix {
+  0% {background-color: rgb(104, 151, 98); border-radius: 100px; height: 1px; width: 1px; left: 455px; top: 400px;}
+  100% {background-color: rgb(20, 85, 12); border-radius: 100px; height: 200px; width: 200px; left: 350px; top: 200px;}
+}
+#appleOne {
+  animation: appleOne 4s ease-in 8s 1 forwards;
+}
+#appleTwo {
+  animation: appleTwo 4s ease-in 8s 1 forwards;
+}
+#appleThree {
+  animation: appleThree 4s ease-in 8s 1 none;
+}
+#appleFour {
+  animation: appleFour 4s ease-in 8s 1 forwards;
+}
+#appleFive {
+  animation: appleFive 4s ease-in 8s 1 forwards;
+}
+#appleSix {
+  animation: appleSix 4s ease-in 8s 1 forwards;
+}
+#appleSeven {
+  animation: appleSeven 4s ease-in 8s 1 forwards;
+}
+@keyframes appleOne {
+  0% {background-color: rgb(124, 6, 6); border-radius: 15px; height: 1px; width: 1px; left: 440px; top: 165px;}
+  100% {background-color: rgb(255, 0, 0); border-radius: 15px; height: 30px; width: 30px; left: 425px; top: 150px;}
+}
+@keyframes appleTwo {
+  0% {background-color: rgb(124, 6, 6); border-radius: 15px; height: 1px; width: 1px; left: 565px; top: 165px;}
+  100% {background-color: rgb(255, 0, 0); border-radius: 15px; height: 30px; width: 30px; left: 550px; top: 150px;}
+}
+@keyframes appleThree {
+  0% {background-color: rgb(124, 6, 6); border-radius: 15px; height: 1px; width: 1px; left: 365px; top: 250px;}
+  100% {background-color: rgb(255, 0, 0); border-radius: 15px; height: 30px; width: 30px; left: 350px; top: 235px;}
+}
+@keyframes appleFour {
+  0% {background-color: rgb(124, 6, 6); border-radius: 15px; height: 1px; width: 1px; left: 640px; top: 250px;}
+  100% {background-color: rgb(255, 0, 0); border-radius: 15px; height: 30px; width: 30px; left: 625px; top: 235px;}
+}
+@keyframes appleFive {
+  0% {background-color: rgb(124, 6, 6); border-radius: 15px; height: 1px; width: 1px; left: 440px; top: 335px;}
+  100% {background-color: rgb(255, 0, 0); border-radius: 15px; height: 30px; width: 30px; left: 425px; top: 320px;}
+}
+@keyframes appleSix {
+  0% {background-color: rgb(124, 6, 6); border-radius: 15px; height: 1px; width: 1px; left: 565px; top: 335px;}
+  100% {background-color: rgb(255, 0, 0); border-radius: 15px; height: 30px; width: 30px; left: 550px; top: 320px;}
+}
+@keyframes appleSeven {
+  0% {background-color: rgb(124, 6, 6); border-radius: 15px; height: 1px; width: 1px; left: 500px; top: 250px;}
+  100% {background-color: rgb(255, 0, 0); border-radius: 15px; height: 30px; width: 30px; left: 485px; top: 235px;}
+}
+#fallenApple {
+  animation: fallenApple 10s ease-in 12s 1 forwards;
+}
+@keyframes fallenApple {
+  0% {background-color: rgb(255, 0, 0); border-radius: 15px; height: 30px; width: 30px; left: 350px; top: 235px;}
+  10% {background-color: rgb(255, 0, 0); border-radius: 15px; height: 30px; width: 30px; left: 350px; top: 235px;}
+  15% {background-color: rgb(255, 0, 0); border-radius: 15px; height: 30px; width: 30px; left: 350px; top: 670px;}
+  16% {background-color: rgb(255, 0, 0); border-radius: 15px; height: 30px; width: 30px; left: 345px; top: 650px;}
+  17% {background-color: rgb(255, 0, 0); border-radius: 15px; height: 30px; width: 30px; left: 340px; top: 670px;}
+  95% {background-color: rgb(0, 0, 0); border-radius: 15px; height: 30px; width: 30px; left: 340px; top: 670px;}
+  100% {background-color: rgb(0, 0, 0); height: 1px; width: 30px; left: 340px; top: 700px;}
+}

@@ -157,3 +157,59 @@ iframe {
     border-color: #005b96;
     padding: 10px;
 }
+
+
+/* tables.html */
+.header{
+    display: block;
+}
+.table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+caption {
+    font-size: .85em;
+    caption-side: bottom;
+    margin-bottom: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+thead th {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+thead th[colspan="4"] {
+    padding: 15px;
+}
+thead th:nth-child(n+2){
+    background-color: #313131;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+tbody td:first-child {
+    font-weight: bold;
+}

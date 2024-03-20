@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is an assignment page for the CSS Keyframe Animations student presentation for week 8 in WDD 230.">
+    <title>WDD 230 &bull; Week 8 &bull; CSS Keyframe Animations</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+    <header>
+        <h1>WDD 230 &bull; Week 8</h1>
+    </header>  
+    <nav>
+        <ul>
+            <li><a href="./">Video</a></li>
+            <li class="active"><a href="basics.html">Basics</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="example.html">Example</a></li>
+        </ul>
+    </nav>
+    <div class="secondNavBar">
+        <button class="secondNav tablink highlightTab" onclick="openSection(event, 'sectionNameAnimation')">Animations</button>
+        <button class="secondNav tablink" onclick="openSection(event, 'sectionNameElement')">Element</button>
+        <button class="secondNav tablink" onclick="openSection(event, 'sectionNameStart')">Begin/End</button>
+        <button class="secondNav tablink" onclick="openSection(event, 'sectionNameMultiple')">Multiple Styles</button>
+        <button class="secondNav tablink" onclick="openSection(event, 'sectionNameDuration')">Duration</button>
+    </div>
+    <main>
+        <h2>CSS Keyframe Animations</h2>
+        <hr>
+        <section id="sectionNameAnimation" class="sectionName">
+            <h3>What is a CSS Keyframe Animation?</h3>
+            <p>CSS keyframes allow us to animate HTML elements without using JavaScript. This is accomplished by changing the styles from one specification to another. For example, we can change the background color of an element from black to white.</p>
+            <h4>Templet</h4>
+            <p class="codingText">@keyframes <i>animationname</i> {
+                <br>&emsp;<i>keyframes-selector</i> {<i>css-styles</i>;}
+                <br>}</p>
+            <h4>Example</h4>
+            <p class="codingText">@keyframes example {
+                <br>&emsp;0% {background-color: #153e5c;}
+                <br>&emsp;100% {background-color: #c1cdd5;}
+                <br>}</p>
+            <p>In this example we are changing the background color from a darker blue (#153e5c) to a lighter blue (#c1cdd5). Click the box below to watch this happen.</p>
+            <button type="button" id="exampleOne" onclick="activateOne()"></button>
+        </section>
+        <section id="sectionNameElement" class="sectionName" style="display: none;">
+            <h3>Binding to an Element</h3>
+            <p>In order for your animations to work you need to bind the @keyframes to an element. This is done by adding the property name "animation-name" to the element's selector, and inserting that same name after your @keyframes selector as seen below.</p>
+            <h4>Templet</h4>
+            <p class="codingText"><i>element</i> {
+                <br>&emsp;animation-name: <i>animationname</i>;
+                <br>}
+                <br>@keyframes <i>animationname</i> {
+                <br>&emsp;<i>keyframes-selector</i> {<i>css-styles</i>;}
+                <br>}</p>
+            <h4>Example</h4>
+            <p class="codingText">div {
+                <br>&emsp;animation-name: example;
+                <br>}
+                <br>@keyframes example {
+                <br>&emsp;<i>keyframes-selector</i> {<i>css-styles</i>;}
+                <br>}</p>
+        </section>
+        <section id="sectionNameStart" class="sectionName" style="display: none;">
+            <h3>Beginning and Ending</h3>
+            <p>You can change the CSS styles of an element as many times as you want in the same keyframe. To specify when a change will take place in the animation, use percentiles. At minimum you need to specify keyframes-selectors at 0% and 100%. These indicate where the animation starts (0%) and ends (100%). These can also be written as 'from' (equal to 0%) and 'to' (equal to 100%).</p>
+            <h4>Templet</h4>
+            <P class="codingText">@keyframes <i>animationname</i> {
+                <br>&emsp;0% {<i>css-styles</i>;}
+                <br>&emsp;25% {<i>css-styles</i>;}
+                <br>&emsp;50% {<i>css-styles</i>;}
+                <br>&emsp;75% {<i>css-styles</i>;}
+                <br>&emsp;100% {<i>css-styles</i>;}
+                <br>}</P>
+            <h4>Example</h4>
+            <P class="codingText">@keyframes example {
+                <br>&emsp;0% {background-color: #153e5c;}
+                <br>&emsp;25% {background-color: #ffffff;}
+                <br>&emsp;50% {background-color: #698497;}
+                <br>&emsp;75% {background-color: #000000;}
+                <br>&emsp;100% {background-color: #153e5c;}
+                <br>}</P>
+            <p>In this example we are changing the background color from a darker blue (at 0%) to white (at 25%) to a lighter blue (at 50%) to black (at 75%) and then back to the dark blue we started with (at 100%). Click the box below to watch this happen. </p>
+            <button type="button" id="exampleTwo" onclick="activateTwo()"></button>
+        </section>
+        <section id="sectionNameMultiple" class="sectionName" style="display: none;">
+            <h3>Multiple Styles</h3>
+            <p>You can change as many CSS styles as you want in the same keyframe. To change multiple styles in the same keyframes-selector (or percent) add more styles within the curly brackets after the selector.</p>
+            <h4>Templet</h4>
+            <p class="codingText">@keyframes <i>animationname</i> {
+                <br>&emsp;0% {<i>css-styles</i>; <i>css-styles</i>; <i>css-styles</i>;}
+                <br>&emsp;100% {<i>css-styles</i>; <i>css-styles</i>; <i>css-styles</i>;}
+                <br>}</p>
+            <h4>Example</h4>
+            <p class="codingText">@keyframes example {
+                    <br>&emsp;0% {background-color:#153e5c; left:0px; top:0px;}
+                    <br>&emsp;25% {background-color:#ffffff; left:100px; top:0px;}
+                    <br>&emsp;50% {background-color:#698497; left:100px; top:100px;}
+                    <br>&emsp;75% {background-color:#000000; left:0px; top:100px;}
+                    <br>&emsp;100% {background-color:#153e5c; left:0px; top:0px;}
+                    <br>}</p>
+                <p>In this example we are changing the background color from a darker blue in the upper left corner (at 0%) to white in the upper right corner (at 25%) to a lighter blue in the bottom right corner (at 50%) to black in the bottom left corner (at 75%) and then back to the dark blue we started with in the upper left corner (at 100%). Click the box below to watch this happen.</p>
+            <button type="button" id="exampleThree" onclick="activateThree()"></button>
+        </section>
+        <section id="sectionNameDuration" class="sectionName" style="display: none;">
+            <h3>Duration</h3>
+            <p>The property name "animation-duration" is placed within the element's selector and defines how long the animation will take to complete. This property must be specified or no animation will begin because the default value for it is 0s, meaning zero seconds. </p>
+            <h4>Templet</h4>
+            <p class="codingText"><i>element</i> {
+                <br>&emsp;animation-name: <i>animationname</i>;
+                <br>&emsp;animation-duration: <i>#</i>s;
+                <br>}
+                <br>@keyframes <i>animationname</i> {
+                <br>&emsp;<i>keyframes-selector</i> {<i>css-styles</i>;}
+                <br>}</p>
+            <h4>Example</h4>
+            <p class="codingText">element {
+                <br>&emsp;animation-name: example;
+                <br>&emsp;animation-duration: 10s;
+                <br>}
+                <br>@keyframes example {
+                <br>&emsp;0% {background-color: #153e5c;}
+                <br>&emsp;25% {background-color: #ffffff;}
+                <br>&emsp;50% {background-color: #698497;}
+                <br>&emsp;75% {background-color: #000000;}
+                <br>&emsp;100% {background-color: #153e5c;}
+                <br>}</P>
+            <p>In this example we are changing the background color from a darker blue (at 0%) to white (at 25%) to a lighter blue (at 50%) to black (at 75%) and then back to the dark blue we started with (at 100%). The entire change will take ten seconds. Click the box below to watch this happen.</p>
+            <button type="button" id="exampleFour" onclick="activateFour()"></button>
+        </section>
+    </main>
+    <footer>
+        <p></p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="../script/getdates.js"></script>
+    <script src="scripts/presentation.js"></script>
+</body>
+</html>
