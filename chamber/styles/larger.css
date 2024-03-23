@@ -204,10 +204,11 @@ footer{
     color: var(--text-color);
 }
 .address img{
-    width: 13%;
+    width: 20%;
 }
 .address p{
-    margin: 0 0 20px 0;
+  font-size: 15px;
+  margin: 0 0 20px 0;
 }
 .address h2{
     margin: 0;
@@ -551,3 +552,70 @@ iframe{
   color: #888; 
   margin: 0;
 }
+
+
+
+/* css for directory */
+
+/* .directory{
+  margin: 0;
+} */
+
+.container {
+  /* max-width: 800px; */
+  margin: 0;
+  padding: 20px;
+  display: block;
+}
+
+.view-switch {
+  margin-bottom: 10px;
+}
+
+.direch1{
+  text-align: center;
+  font-size: 40px;
+  text-align: center;
+  line-height: 1.2;
+  color: var(--background-color);
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  width: auto !important;
+  margin: 0;
+  padding-top: 20px;
+}
+.members-container {
+  list-style: none;
+  padding: 0;
+}
+
+.member-card {
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+.member-card h2 {
+  margin-top: 0;
+}
+
+.member-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* @media (max-width: 768px) {
+  .member-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .member-card {
+    width: 100%;
+  }
+} */

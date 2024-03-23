@@ -1,0 +1,68 @@
+{
+    "members": [
+      {
+        "name": "Jumia Nigeria",
+        "address": "14 Montgomery Road, Yaba, Lagos, Nigeria",
+        "phone": "02018881106",
+        "website": "https://group.jumia.com",
+        "image": "images/directory/jumia.svg",
+        "membership_level": "Gold",
+        "other_information": "The Leading E-commerce Platform in Africa"
+      },
+      {
+        "name": "Unilever",
+        "address": "1 Billings Way, Oregun, P.O Box 1063, Ikeja, Lagos",
+        "phone": "+234-(1)-2240332",
+        "website": "https://www.unilevernigeria.com",
+        "image": "images/directory/unilever.svg",
+        "membership_level": "Silver",
+        "other_information": "We are known for our great brands and our belief that doing business the right way drives superior performance."
+      },
+      {
+        "name": "Cocoa - Olam Nigeria Ltd",
+        "address": "Plot 5&6, Abebe Village RoadOpp. FBN Regional OfficeIganmu, Lagos",
+        "phone": "(+234) 1 905 5555",
+        "website": "https://www.olamgroup.com",
+        "image": "images/directory/olam.png",
+        "membership_level": "Bronze",
+        "other_information": "We Are Re-imagining Global Agriculture."
+      },
+      {
+        "name": "FAE Limited",
+        "address": "2, Adu Street, Orile - Aguda, Behind County Hospital, Ogba, Ikeja, Lagos, Nigeria",
+        "phone": "018042022, 08164457322, 08023035431",
+        "website": "https://fae.com.ng",
+        "image": "images/directory/fae-limited.png",
+        "membership_level": "Gold",
+        "other_information": "We are the leading and  Chief envelope manufacturing, customizing, supplying and producing company in Nigeria."
+      },
+      {
+        "name": "Konga",
+        "address": "16, Otigba Street, Adj. Police Post, Computer Village, Ikeja",
+        "phone": "0708 063 5700, 01 888 3435",
+        "website": "https://www.konga.com",
+        "image": "images/directory/konga.png",
+        "membership_level": "Silver",
+        "other_information": "Konga.com is Nigeria's largest online mall."
+      },
+      {
+        "name": "Nigeria Brewries Plc",
+        "address": "Iganmu House, Abebe Village Road, Iganmu, Lagos State Nigeria",
+        "phone": "0800-600-0000",
+        "website": "https://www.nbplc.com",
+        "image": "images/directory/brewry",
+        "membership_level": "Bronze",
+        "other_information": "Nigerian Breweries Plc, the pioneer and largest brewing Company in Nigeria."
+      },
+      {
+        "name": "Fate Foundation",
+        "address": "16, Town Planning Way, Ilupeju, Lagos, Nigeria.",
+        "phone": "+234 701 130 5444",
+        "website": "https://fatefoundation.org",
+        "image": "images/directory/fate-foundation.png",
+        "membership_level": "Non-Profit",
+        "other_information": "FATE Foundation is Nigeria’s foremost enterprise support organisation enabling aspiring and emerging Nigerian Entrepreneurs to Start, Grow and Scale their businesses."
+      }
+    ]
+  }
+  
