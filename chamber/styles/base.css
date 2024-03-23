@@ -224,9 +224,29 @@
         padding: 20px;
       }
 
+      .direch1,
       .formh1{
-        font-size: 25px;
+        font-size: 20px;
       }
         
 
+      /* css for directory */
+      .container{
+        margin: auto;
+        padding: 20px;
+      }
+
+      .grid-view-container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .list-item .member-logo{
+        display: none;
+      }
+
+      .image-info{
+        display: block
+      }
+        
 }

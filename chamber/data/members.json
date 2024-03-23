@@ -7,7 +7,7 @@
         "website": "https://group.jumia.com",
         "image": "chamber/images/jumia.svg",
         "membership_level": "Gold",
-        "other_information": "The Leading E-commerce Platform in Africa"
+        "other_information": " 'The Leading E-commerce Platform in Africa' "
       },
       {
         "name": "Unilever",
@@ -16,7 +16,7 @@
         "website": "https://www.unilevernigeria.com",
         "image": "chamber/images/unilever.svg",
         "membership_level": "Silver",
-        "other_information": "We are known for our great brands and our belief that doing business the right way drives superior performance."
+        "other_information": " 'We are known for our great brands and our belief that doing business the right way drives superior performance.' "
       },
       {
         "name": "Cocoa - Olam Nigeria Ltd",
@@ -25,7 +25,7 @@
         "website": "https://www.olamgroup.com",
         "image": "chamber/images/olam.png",
         "membership_level": "Bronze",
-        "other_information": "We Are Re-imagining Global Agriculture."
+        "other_information": " 'We Are Re-imagining Global Agriculture.' "
       },
       {
         "name": "FAE Limited",
@@ -34,7 +34,7 @@
         "website": "https://fae.com.ng",
         "image": "chamber/images/fae-limited.png",
         "membership_level": "Gold",
-        "other_information": "We are the leading and  Chief envelope manufacturing, customizing, supplying and producing company in Nigeria."
+        "other_information": " 'We are the leading and  Chief envelope manufacturing, customizing, supplying and producing company in Nigeria.' "
       },
       {
         "name": "Konga",
@@ -43,7 +43,7 @@
         "website": "https://www.konga.com",
         "image": "chamber/images/konga.png",
         "membership_level": "Silver",
-        "other_information": "Konga.com is Nigeria's largest online mall."
+        "other_information": " 'Konga.com is Nigeria's largest online mall.'"
       },
       {
         "name": "Nigeria Brewries Plc",
@@ -52,7 +52,7 @@
         "website": "https://www.nbplc.com",
         "image": "chamber/images/brewry.svg",
         "membership_level": "Bronze",
-        "other_information": "Nigerian Breweries Plc, the pioneer and largest brewing Company in Nigeria."
+        "other_information": " 'Nigerian Breweries Plc, the pioneer and largest brewing Company in Nigeria.' "
       },
       {
         "name": "Fate Foundation",
@@ -61,7 +61,7 @@
         "website": "https://fatefoundation.org",
         "image": "chamber/images/fate-foundation.png",
         "membership_level": "Non-Profit",
-        "other_information": "FATE Foundation is Nigeria’s foremost enterprise support organisation enabling aspiring and emerging Nigerian Entrepreneurs to Start, Grow and Scale their businesses."
+        "other_information": " 'FATE Foundation is Nigeria’s foremost enterprise support organisation enabling aspiring and emerging Nigerian Entrepreneurs to Start, Grow and Scale their businesses.' "
       }
     ]
   }

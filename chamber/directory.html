@@ -51,14 +51,26 @@
     </div>
     </nav>
     <main class="directory">
-        <div class="container">
-            <h1 class="direch1">Chamber of Commerce Members</h1>
+        <h1 class="direch1">Chamber of Commerce Members</h1>
+        <section class="container">
             <div class="view-switch">
-              <button id="cardViewBtn">Card View</button>
-              <button id="listViewBtn">List View</button>
+              <div class="dropdown">
+                <button class="dropbtn">
+                  <span class="icon-grid">View</span>
+                  <!-- <span class="icon-tile">Tile</span> -->
+                </button>
+                <div class="dropdown-content">
+                  <a href="#" id="grid-view">Grid View</a>
+                  <a href="#" id="tile-view">Tile View</a>
+                </div>
+              </div>
             </div>
-            <div id="membersContainer" class="members-container"></div>
-          </div>
+            <div id="membersContainer" class="members-container">
+                <div id="gridViewContainer" class="grid-view-container"></div>
+                <div id="listViewContainer" class="list-view-container"></div>
+            </div>
+            
+        </section>
         
     </main>
     <footer>
