@@ -1,0 +1,28 @@
+{
+    "wardInformation":{
+        "familyName": "Omotoyinbo",
+        "moveInDate":  "2017-09-3",
+        "numberOfPeople": 3,
+        "vistedByBishopric": true,
+        "familyMembers": [
+            {
+                "name": "John Omotoyinbo",
+                "gender": "male",
+                "birthate": "1998-11-17"
+            },
+            {
+                "name": "Made Omotoyinbo",
+                "gender": "male",
+                "birthate": "1996-03-11"
+            },
+            {
+                "name": "Tayo Omotoyinbo",
+                "gender": "male",
+                "birthate": "1994-05-21"
+            }
+
+        ]
+    
+    }
+    
+}

@@ -19,10 +19,10 @@ function displayPasswordStrength() {
 
     if (password.length < 8) {
         passwordMessage.textContent = "Password should be at least 8 characters long.";
-        passwordMessage.style.color = "red"; // Set color to red for weak passwords
+        passwordMessage.style.color = "red"; 
     } else {
         passwordMessage.textContent = "Strong password";
-        passwordMessage.style.color = "green"; // Set color to green for strong passwords
+        passwordMessage.style.color = "green"; 
     }
 
     // Set color based on password length (4-7 characters)
@@ -53,10 +53,10 @@ document.getElementById('email').addEventListener('input', function() {
 
     if (!isValidEmail) {
         emailError.textContent = "Please enter a valid byui.edu email address.";
-        emailInput.classList.remove('valid'); // Remove valid class if email is invalid
+        emailInput.classList.remove('valid'); 
     } else {
         emailError.textContent = "";
-        emailInput.classList.add('valid'); // Add valid class if email is valid
+        emailInput.classList.add('valid'); 
     }
 });
 

@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
           break;
         } else {
           const date = new Date(year, month, day);
-          const isCurrentDate = date.toDateString() === new Date().toDateString(); // Check if it's the current date
+          const isCurrentDate = date.toDateString() === new Date().toDateString();
           calendarHTML += `<div class="${isCurrentDate ? 'current-date' : ''}">${day}</div>`;
           day++;
         }

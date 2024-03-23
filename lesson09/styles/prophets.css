@@ -1,0 +1,63 @@
+body{
+    width: 90%;
+    margin: auto;
+}
+
+h1{
+    font-family: 'MadimiOne', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 0%;
+    color: rgb(18, 18, 206);
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 5px;
+    margin: 50px;
+  }
+  
+  section {
+    background-color: rgb(221, 228, 247);
+    border: .5px solid rgb(125, 125, 250);
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  section img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  section h2 {
+    margin-top: 0;
+    font-family: 'MadimiOne', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(18, 18, 206);
+  }
+  
+  section p {
+    margin: 5px 0;
+    font-family: 'MadimiOne', sans-serif; 
+    font-size: 15px; 
+  }
+
+
+@media only screen  and (max-width: 600px) {
+    #cards{
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0 0 0;
+        gap: 10px;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+  }
+  
