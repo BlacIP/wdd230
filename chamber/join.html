@@ -37,7 +37,7 @@
     </div>
     <div class="nav">
         <div class="nav-list">
-            <a href="#"> Home</a>
+            <a href="index.html"> Home</a>
             <a href="discover.html">Discover</a>
             <a href="discovery.html">Discovery</a>
         </div>
@@ -50,40 +50,65 @@
           </label>
     </div>
     </nav>
-    <main>
-        <section class="event-weather">
-            <div class="card">
-                <h2> Events</h2>
-
-            </div>
-            <div class="card">  
-                <h2> Weather</h2>
-                <div id="weather">
-                    <p>Temperature: <span id="temperature">75</span> °F</p>
-                    <p>Wind Speed: <span id="windSpeed">5</span> mph</p>
-                    <p>Wind Chill: <span id="windChill">N/A</span> °F</p>
-                </div>
-        
-            </div>
-        </section>
-        <section class="add">
-                <div class="card" id="ad1">
-                    <h2> God Is Good Motors (GIGM)</h2>
-                    <p>"The modern way to commute across cities" <br>
-                        <a href="mailto:contact@gigm.com ">contact@gigm.com </a> <br> 
-                        <a href="tel:+2348139851110"> +234(0)813 9851 110 </a>
-                        <br><a href="gigm.com">Website</a> </p>
-                    
-                </div>
-                <div class="card" id="ad2">
-                    
+    <main class="form-content">
+        <h1 class="formh1">Membership Application Form</h1>
+        <div class="formdiv"> 
+           
+            <form action="thankyou.html" method="get" class="membership">
+           
+                <label for="firstName">First Name:
+                    <input type="text" name="firstName" required>
+                </label>
                 
-                </div>
-                <div class="card" id="ad3"> 
-                 
-                </div>
-        </section>
+                <label for="lastName">Last Name:
+                    <input type="text" name="lastName" required>
+                </label>
+                
+                <label for="title">Title or Position:
+                    <input type="text" name="title" required pattern="[A-Za-z\s-]{7,}" title="Please enter at least 7 characters consisting of letters, hyphens, and spaces" placeholder="Mr/Mrs/Phd.">
+                </label>
+                
+                <label for="email">Email:
+                    <input type="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="example@example.com" oninput="validateEmail()">
+                    <span id="emailError" class="error-message">Please enter a valid email address</span>
+                </label>
+                
+                
+                <label for="phone">Mobile Phone:
+                    <input type="tel" name="phone" required placeholder="+2347085265374">
+                </label>
+                
+                <label for="organization">Organization Name:
+                    <input type="text" name="organization" required>
+                </label>
+                
+                <label for="membershipLevel">Membership Level:
+                    <select id="membershipLevel" name="membershipLevel">
+                        <option value="">Please select &#9662; </option>
+                        <option value="NP">NP Membership (Free)</option>
+                        <option value="Bronze">Bronze Membership</option>
+                        <option value="Silver">Silver Membership</option>
+                        <option value="Gold">Gold Membership</option>
+                    </select>
+                </label>
+                    
+                    <div id="benefitsContainer" class="benefits">
+                        <p id="costImplication" class="cost-implication"></p>
+                    </div>
+                <label for="description">Organization Description
+                    <textarea  name="description" rows="4" cols="50" placeholder="Type Here..."></textarea>
+                </label>
+  
+                <input type="hidden" id="timestamp" name="timestamp">
+                
+                <input type="submit" value="Join">
+            </form>
+        </div>
+
+         
+  
     </main>
+    
     <footer>
         <section class="address">
             <div>
@@ -103,6 +128,8 @@
             <p id="lastModified"></p>
         </div>
     </footer>
+
+    <script src="scripts/benefits.js"></script>
     <script src="scripts/scripts.js"></script>
 
 

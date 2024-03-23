@@ -1,10 +1,17 @@
+// const currentYear = new Date().getFullYear();
+// document.querySelector('#year').textContent = `© ${currentYear} | Lekki Chamber of Commerce | Boluwatife Adebiyi Omotoyinbo | WDD230 Project`;
+
+
+// const lastModifiedDate = document.lastModified;
+// document.getElementById('lastModified').textContent = `| Last Modified: ${lastModifiedDate}`;
+
+
 const currentYear = new Date().getFullYear();
-document.querySelector('#year').textContent = `© ${currentYear} | Lekki Chamber of Commerce | Boluwatife Adebiyi Omotoyinbo | WDD230 Project`;
+document.querySelector('.info p').textContent = `© ${currentYear} | Lekki Chamber of Commerce | Boluwatife Adebiyi Omotoyinbo | WDD230 Project`;
 
 
 const lastModifiedDate = document.lastModified;
 document.getElementById('lastModified').textContent = `| Last Modified: ${lastModifiedDate}`;
-
 
 function callHeader(h1) {
     // Force reflow or toggle animation class here
@@ -36,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         callHeader(h1);
     }, 5000);
 });
-
 
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.nav');

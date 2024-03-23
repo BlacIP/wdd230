@@ -425,3 +425,129 @@ iframe{
     height: fit-content;
   }
   
+
+  /* css for join */
+
+.form-content {
+  margin: auto;
+  background-color: #f6f4f46b;
+  padding-bottom: 20px;
+  display: block;
+}
+.formdiv{
+  background-color: var(--text-color);
+  width: 30%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.formh1{
+  text-align: center;
+  font-size: 40px;
+  text-align: center;
+  line-height: 1.2;
+  color: var(--background-color);
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  width: auto !important;
+  margin: 0;
+  padding-top: 20px;
+}
+  
+.membership label {
+  display: block;
+  margin-bottom: 5px;
+  padding-top: 1rem;
+  color: var(--background-color);
+  font-size: 15px;
+  width: 100%;
+}
+  
+.membership input[type="text"],
+.membership input[type="email"],
+.membership input[type="tel"],
+.membership select,
+.membership textarea {
+  background-color: #ededed;
+  box-sizing: border-box;
+  width: 100%;
+  padding: .75rem;
+  margin-bottom: 10px;
+  border: solid 2px #efefef;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #555;
+  appearance: none;
+  }
+  
+.membership input[type="submit"]{
+  border: none;
+  background: var(--background-color);
+  color: #fff;
+  border-radius: 6px;
+  padding: .8rem;
+  width: 100%;
+  box-shadow: 1px 1px 4px #999;
+    
+}
+.membership input[type="submit"]:hover{
+  background: var(--allternative-bg-color);
+}
+
+.benefits h2{
+  margin: auto;
+}
+
+.benefits {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--alternative-white);
+}
+
+
+.benefits ul {
+  list-style-type: disc;
+  padding-left: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 0;
+}
+
+.benefits li {
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.error-message {
+  color: red;
+  display: none;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+.thankyou{
+  margin-bottom: 30px;
+}
+.formdiv img{
+  width: 50%;
+}
+.thankyou p{
+  text-align: center;
+  font-size: large;
+}
+
+.cost-implication {
+  text-align: left;
+  font-style: italic;
+  color: #888; 
+  margin: 0;
+}
