@@ -4,48 +4,47 @@ const linksURL = "https://blacip.github.io/wdd230/data/links.json";
 async function getLinks() {
     const response = await fetch(linksURL);
     const data = await response.json();
-    displayLinks(data); 
-}
+    console.log(data); 
+    displayLinks(data.lessons); 
+  }
 
-function displayLinks(weeks) {
+
+function displayLinks(lessons) {
   const menu = document.getElementById("activityLinks");
   
-  // Clear existing content
   menu.innerHTML = "";
   
-  // Loop through each week
-  weeks.forEach(week => {
-    const weekNum = week.lesson;
-    const links = week.links;
+  
+  const list = document.createElement("ul")
+  lessons.forEach(lesson => {
+    const weekNum = lesson.lesson;
+    const links = lesson.links;
 
-    // Create list item for week
     const weekItem = document.createElement("li");
-    weekItem.textContent = `Week ${weekNum}:`;
+    const weekText = document.createTextNode(`Week ${weekNum}: `);
+    weekItem.appendChild(weekText);
 
-    // Create nested unordered list for links
-    const linkList = document.createElement("ul");
+    const linksContainer = document.createElement("span");
 
-    // Loop through each link
-    links.forEach(link => {
-      const listItem = document.createElement("li");
+    links.forEach((link, index) => {
+
       const anchor = document.createElement("a");
-      anchor.href = baseURL + link.url;
+      anchor.href = link.url.startsWith("http") ? link.url : baseURL + link.url;
       anchor.textContent = link.title;
-      listItem.appendChild(anchor);
-      linkList.appendChild(listItem);
+      linksContainer.appendChild(anchor);
+
+      if (index < links.length - 1) {
+        const separator = document.createTextNode(" | ");
+        linksContainer.appendChild(separator);
+      }
     });
 
-    // Append nested list to week item
-    weekItem.appendChild(linkList);
-
-    // Append week item to menu
-    menu.appendChild(weekItem);
+    
+    weekItem.appendChild(linksContainer);
+    list.appendChild(weekItem);
   });
+
+  menu.appendChild(list);
 }
 
-
-
-
 getLinks();
-
-  
