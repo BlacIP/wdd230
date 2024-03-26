@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boluwatife Adebiyi Omotoyinbo - WDD 230 - Web Frontend Development</title>
+    <title> Form Page Build - Boluwatife Adebiyi Omotoyinbo - WDD 230 - Web Frontend Development</title>
     <meta name="author" content="Boluwatife Adebiyi Omotoyinbo">
-    <meta name="description" content="Welcome to Boluwatife Adebiyi Omotoyinbo's
-     WDD 230 - Web Frontend Development course assignment portal. Access all weekly
-      activities, assignments, and updates here.">
+    <meta name="description" content="Form Page Build - Boluwatife Adebiyi Omotoyinbo - WDD 230 - Web Frontend Development">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/form.css">
@@ -32,30 +30,30 @@
         <a href="https://www.byui.edu/" target="_blank">BYU-Idaho</a>
         <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
     </nav>
-<body>
     <main class="form">
         <form action="record.html" method="get" class="login">
             <fieldset>
                 <legend>User Login</legend>
-                    <label> <p> Username: </p>
+                    <label> 
+                        <span> Username: </span>
                         <input type="text" id="username" name="username" required>
                     </label>
                     
                     <label>
-                        <p>Password:</p>
+                        <span> Password: </span>
                         <input type="password" id="password" name="password" required pattern="[A-Za-z0-9]{8,}">
                         <span class="password-message" id="password-message"></span>
                     </label>
                     
                     <label>
-                        <p>Confirm Password:</p>
+                        <span> Confirm Password: </span>
                         <input type="password" id="confirm_password" name="confirm_password" required pattern="[A-Za-z0-9]{8,}">
                         <span class="error-message" id="confirm-password-error"></span>
                     </label>
                     
                 
                     <label>
-                    <p>Email:</p>
+                    <span> Email: </span>
                     <input type="email" id="email" name="email" required pattern="^(a-zA-Z0-9._%+-)+@byui\.edu$" title="A valid byui.edu email address.">
                     <span class="error-message" id="email-error"></span>
                     </label>

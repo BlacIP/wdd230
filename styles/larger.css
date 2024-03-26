@@ -85,6 +85,19 @@
         margin: 20px auto;
         border-collapse: collapse;
     }
+
+    .weather-info{
+        flex-direction: column;
+    }
+
+    .weather-info p{
+        margin: 0;
+    }
+
+    .weather-info figure{
+        padding: 0;
+    }
+    
 }
     
 @media only screen and (min-width: 900px) {

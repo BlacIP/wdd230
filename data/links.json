@@ -55,14 +55,21 @@
         "links": [
           {"url": "https://youtu.be/KAMN1SapAg8", "target":"_blank",  "title": "CSS Keyframes Presentation"},
           {"url": "lesson08/table.html", "title": "Table activity"},
-          {"url": "Form-Start/index.html", "title": "Form-Start"}
+          {"url": "Form-Start/index.html", "title": "Form-Start"},
+          {"url": "form.html", "title": "Form Build"}
         ]
       },
       {
         "lesson": "09",
         "links": [
           {"url": "lesson09/new-ward-members.json", "title": "JSON"},
-          {"url": "lesson09/prophets.html", "title": "LDS Prophets"}
+          {"url": "lesson09/prophets.html", "title": "Fetch API Activity - LDS Prophets"}
+        ]
+      },
+      {
+        "lesson": "10",
+        "links":[
+          {"url": "lesson10/weather.html", "title": "Weather Page"}
         ]
       }
     ]

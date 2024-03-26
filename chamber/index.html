@@ -57,13 +57,24 @@
 
             </div>
             <div class="card">  
-                <h2> Weather</h2>
+                <h2>Weather</h2>
                 <div id="weather">
-                    <p>Temperature: <span id="temperature">75</span> °F</p>
-                    <p>Wind Speed: <span id="windSpeed">5</span> mph</p>
-                    <p>Wind Chill: <span id="windChill">N/A</span> °F</p>
+                    <div class="temp"> 
+                        <p >Temperature:</p>
+                        <div class="temprature"> 
+                           
+                            <p> <span id="temperature">--</span>°F</p>
+                            <p><span id="weatherDescription">--</span></p>
+                        </div>
+                    </div>
+                    <p>Wind Speed: <span id="windSpeed">--</span> mph</p>
+                    <p>Wind Chill: <span id="windChill">--</span> °F</p>
+                    <div id="forecast">
+                        <h3>Three-Day Forecast</h3>
+                        <div id="forecastData">
+                        </div>
+                    </div>
                 </div>
-        
             </div>
         </section>
         <section class="add">
@@ -83,12 +94,16 @@
                  
                 </div>
         </section>
+        <div id="overlay"></div> 
+        <div id="popupBanner" class="popupBanner">
+            <span class="closePopup" onclick="closePopupBanner()">&times;</span>
+            <p>Don't miss our Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.! <br> See you there!</p>
+        </div>
     </main>
     <footer>
         <section class="address">
             <div>
                 <img src="images/lekki-chambers-logo.webp" alt="lekki-chambers-logo">
-                 <!-- <h2> Lekki Chamber Of Commerce</h2> -->
                 <p>Lekki Free Trade center, Lagos, Nigeria 
                 <br>P.O Box 10695, Lagos State, Nigeria. 
                 <br>Email: info@lekkichamber.org
@@ -103,6 +118,7 @@
             <p id="lastModified"></p>
         </div>
     </footer>
+    <script src="scripts/windchill.js"></script>
     <script src="scripts/scripts.js"></script>
 
 

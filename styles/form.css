@@ -39,13 +39,11 @@
     width: 100%;
     margin-bottom: 10px;
 }
-
-
 .login label p{
     margin: 0;
 }
 
-.login label p::after{
+.login label span:first-child::after{
     content: "*";
     color: var(--error-color);
 }
@@ -128,4 +126,49 @@
 
 #rangevalues option {
 	flex: 1 1 auto;
+}
+
+.record{
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: block;
+    width: 60%;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+   .form{
+    width: auto;
+    margin: 5%;
+   }
+
+   .login fieldset{
+    width: 90%;
+    
+    }
+
+    .login label{
+        width: 100%;
+    }
+
+    .login input[type="text"],
+    .login input[type="password"],
+    .login input[type="email"] {
+    width: 100%;
+    box-sizing: border-box;
+    
+    }
+
+    .range{
+        width: 100%;
+    }
+
+    #rangevalues{
+        gap: 12px;
+    }
 }
