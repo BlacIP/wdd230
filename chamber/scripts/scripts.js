@@ -57,6 +57,27 @@ modeSwitch.addEventListener("change", () => {
   }
 });
 
+
+// Function to set the active link
+function setActiveLink() {
+    // Get the current page URL
+    const currentPageUrl = window.location.href;
+
+    // Get all links in the navigation menu
+    const links = document.querySelectorAll('.nav-list a');
+
+    // Loop through each link and check if its href matches the current page URL
+    links.forEach(link => {
+        if (link.href === currentPageUrl) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Call the function when the page loads
+window.onload = setActiveLink;
+
+
 const visitsDisplay = document.querySelector(".visits");
 const lastVisitDate = window.localStorage.getItem("lastVisitDate");
 const currentDate = new Date().getTime();
