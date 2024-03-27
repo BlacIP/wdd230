@@ -65,7 +65,6 @@ async function updateWeather() {
     weatherIcon.classList.add('weather-icon'); 
     weatherDescriptionElement.appendChild(weatherIcon);
     
-    // Calculate and update wind chill
     updateWindChill();
     
     // Get current day

@@ -3,7 +3,7 @@
       {
         "lesson": "01",
         "links": [
-          {"url": "lesson01/hollygrail.html", "title": "Hollygrail"}
+          {"url": "lesson01/holygrail.html", "title": "Hollygrail"}
         ]
       },
       {
@@ -16,7 +16,7 @@
       {
         "lesson": "03",
         "links": [
-          {"url": "lesson03/images/combinators.webp", "title": "CSS Combinators"},
+          {"url": "images/combinators.webp", "title": "CSS Combinators"},
           {"url": "https://codepen.io/Omotoyinbo-Bolu-Adebiyi/pen/poYdVZa", "title": "CSS Pseudo-elements"},
           {"url": "https://codepen.io/Omotoyinbo-Bolu-Adebiyi/pen/wvOPjRe", "title": "Hamburger Menu"},
           {"url": "lesson03/chamber-site-plan.html", "title": "Chamber Site-Plan"}
