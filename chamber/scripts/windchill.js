@@ -9,9 +9,9 @@ const closeBannerButton = document.getElementById('closeBanner');
 
 // Function to fetch weather data from OpenWeatherMap API
 async function fetchWeatherData() {
-    const apiKey = '335693caab24c80dc3e31365307b3f55'; // Replace with your OpenWeatherMap API key
-    const cityName = 'Lagos'; // City name
-    const countryCode = 'NG'; // Country code for Nigeria
+    const apiKey = '335693caab24c80dc3e31365307b3f55'; 
+    const cityName = 'Lagos'; 
+    const countryCode = 'NG'; 
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName},${countryCode}&units=imperial&appid=${apiKey}`;
     
     try {
@@ -25,9 +25,9 @@ async function fetchWeatherData() {
 
 // Function to fetch forecast data from OpenWeatherMap API
 async function fetchForecastData() {
-    const apiKey = '335693caab24c80dc3e31365307b3f55'; // Replace with your OpenWeatherMap API key
-    const cityName = 'Lagos'; // City name
-    const countryCode = 'NG'; // Country code for Nigeria
+    const apiKey = '335693caab24c80dc3e31365307b3f55'; 
+    const cityName = 'Lagos'; 
+    const countryCode = 'NG'; 
     const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName},${countryCode}&units=imperial&appid=${apiKey}`;
     
     try {
@@ -62,7 +62,7 @@ async function updateWeather() {
     const weatherIcon = document.createElement('img');
     weatherIcon.src = weatherIconUrl;
     weatherIcon.alt = 'Weather Icon';
-    weatherIcon.classList.add('weather-icon'); // Add a class to the weather icon
+    weatherIcon.classList.add('weather-icon'); 
     weatherDescriptionElement.appendChild(weatherIcon);
     
     // Calculate and update wind chill
@@ -70,7 +70,7 @@ async function updateWeather() {
     
     // Get current day
     const today = new Date();
-    const currentDay = today.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+    const currentDay = today.getDay(); 
     
     // Get forecast for the next three days
     const forecastDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -105,7 +105,7 @@ async function updateWeather() {
     });
     
         // Update forecast data for each day
-    forecastDataElement.innerHTML = ''; // Clear previous forecast data
+    forecastDataElement.innerHTML = ''; 
     for (const dayOfWeek in forecastByDay) {
         if (forecastByDay.hasOwnProperty(dayOfWeek)) {
             const temperatures = forecastByDay[dayOfWeek].temperatures;
@@ -113,13 +113,13 @@ async function updateWeather() {
             const icons = forecastByDay[dayOfWeek].icons;
             const averageTemperature = (temperatures.reduce((acc, curr) => acc + curr, 0) / temperatures.length).toFixed(1);
             const forecastItem = document.createElement('div');
-            forecastItem.classList.add('temp'); // Add a class to the forecast item
+            forecastItem.classList.add('temp'); 
             forecastItem.innerHTML = `<p><strong>${dayOfWeek}</strong>:  ${averageTemperature} °F, ${descriptions[0]} `;
             const iconUrl = `https://openweathermap.org/img/w/${icons[0]}.png`;
             const iconElement = document.createElement('img');
             iconElement.src = iconUrl;
             iconElement.alt = 'Weather Icon';
-            iconElement.classList.add('weather-icon'); // Add a class to the weather icon
+            iconElement.classList.add('weather-icon'); 
             forecastItem.appendChild(iconElement);
             forecastDataElement.appendChild(forecastItem);
         }
@@ -151,25 +151,20 @@ function updateWindChill() {
 // Function to display the popup banner on specified days
 function displayPopupBanner() {
     const today = new Date();
-    const dayOfWeek = today.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+    const dayOfWeek = today.getDay(); 
     
-    if (dayOfWeek >= 1 && dayOfWeek <= 3) { // Display on Monday, Tuesday, Wednesday
-        document.getElementById('overlay').style.display = 'block'; // Show overlay
-        document.getElementById('popupBanner').style.display = 'block'; // Show popup banner
+    if (dayOfWeek >= 1 && dayOfWeek <= 3) { 
+        document.getElementById('overlay').style.display = 'block'; 
+        document.getElementById('popupBanner').style.display = 'block'; 
     }
 }
 
 // Function to close the popup banner
 function closePopupBanner() {
-    document.getElementById('overlay').style.display = 'none'; // Hide overlay
-    document.getElementById('popupBanner').style.display = 'none'; // Hide popup banner
+    document.getElementById('overlay').style.display = 'none'; 
+    document.getElementById('popupBanner').style.display = 'none'; 
 }
 
 
-// Call the function to display the popup banner on specified days
 displayPopupBanner();
-
-
-// Initial function calls
 updateWeather();
-// updateBannerVisibility();
