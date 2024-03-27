@@ -58,7 +58,7 @@ async function updateWeather() {
     
     // Display weather icon
     const weatherIconCode = weatherData.weather[0].icon;
-    const weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIconCode}.png`;
+    const weatherIconUrl = `https://openweathermap.org/img/wn/${weatherIconCode}.png`;
     const weatherIcon = document.createElement('img');
     weatherIcon.src = weatherIconUrl;
     weatherIcon.alt = 'Weather Icon';
@@ -115,7 +115,7 @@ async function updateWeather() {
             const forecastItem = document.createElement('div');
             forecastItem.classList.add('temp'); // Add a class to the forecast item
             forecastItem.innerHTML = `<p><strong>${dayOfWeek}</strong>:  ${averageTemperature} °F, ${descriptions[0]} `;
-            const iconUrl = `http://openweathermap.org/img/w/${icons[0]}.png`;
+            const iconUrl = `https://openweathermap.org/img/w/${icons[0]}.png`;
             const iconElement = document.createElement('img');
             iconElement.src = iconUrl;
             iconElement.alt = 'Weather Icon';

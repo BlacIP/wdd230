@@ -248,5 +248,10 @@
       .image-info{
         display: block
       }
-        
+    
+
+      .popupBanner {
+        top: 40%;
+        left: 46%;
+      }
 }
