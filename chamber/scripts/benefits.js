@@ -93,14 +93,6 @@ function validateEmail() {
   }
 }
 
-    // Load the Lottie animation
-    var animation = bodymovin.loadAnimation({
-        container: document.getElementById('lottieAnimation'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: 'images/success.json' 
-    });
 
 
 // Set the value of the hidden input field to the current date/time in milliseconds
@@ -110,3 +102,13 @@ document.addEventListener("DOMContentLoaded", function() {
     timestampInput.value = Date.now();
   }
 });
+
+ // Load the Lottie animation
+ var animation = bodymovin.loadAnimation({
+  container: document.getElementById('lottieAnimation'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'images/success.json' 
+});
+
