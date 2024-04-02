@@ -25,6 +25,11 @@ body {
     line-height: 1.5;
     margin: auto
 }
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
 
 .banner {
     background-color: var(--black);
@@ -33,6 +38,7 @@ body {
     color: var(--wite-smoke);
     font-size: 18px;
     margin: auto;
+    position:sticky;
 }
 
 .banner-block{
@@ -56,6 +62,7 @@ body {
 nav{
     background-color: var(--indian-red);
     padding: 5px 10px;
+    width: 100%;
 }
 .nav-bar{
     display: grid;
@@ -76,7 +83,7 @@ nav{
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 100px;
+    gap: 50px;
 }
 
 
@@ -101,51 +108,34 @@ nav{
     width: 100%;
 }
 
-.hero-container {
+.two, .hero-container {
     position: relative;
     width: 100%;
     height: 800px; /* Set the height to match the slides */
     overflow: hidden;
+    background-image: linear-gradient(to top, rgb(0, 0, 0), transparent); /* Apply linear gradient to hero container */
 }
 
-.hero-slide {
+.cta-image, .hero-slide {
+    position: relative;
+    height: 100%; /* Set the height to 100% to fill the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* opacity: 0; */
+    transition: opacity 0.3s ease; /* Add transition effect */
+    z-index: -1;
+}
+
+.cta-image img, .hero-slide img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: none;
-    background-size: cover;
-    background-position: center;
-    transition: opacity 0.3s ease;  
+    object-fit: cover;
 }
 
-.text-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2; /* Adjusted z-index to ensure it's displayed above the slides */
-    color: white;
-    text-align: center;
-}
-
-.slide1 {
-    background-image: url('../images/scoots-og.jpg');
-}
-
-.slide2 {
-    background-image: url('../images/soots-2.jpeg');
-}
-
-.hero-slide.active {
-    display: block;
-    /* opacity: 1; */
-}
-.gradient-bg {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
-}
-      
 
 
 .prev, .next {
@@ -166,4 +156,114 @@ nav{
 
 .next {
     right: 0;
+}
+
+
+.cta-text, .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+
+.hero-content{
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.cta-content h1, .hero-content h1{
+    margin: 20px 0;
+    width: 35%;
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.cta-content p,.hero-content p{
+    margin-bottom: 25px;
+    width: 35%;
+    font-size: 18px;
+    line-height: 1.5;
+
+}
+
+.cta-content a, .hero-content a{
+    background-color: var(--indian-red); 
+    padding: 10px 20px; 
+    color: var(--wite-smoke);
+    border-radius: 10px;
+    font-size: 16px; 
+    text-decoration: none;
+}
+.cta-content a:hover, .hero-content a:hover{
+    background-color: var(--black); 
+}
+.one{
+    padding: 65px 0;
+
+}
+.location{
+    max-width: 1200px;
+    margin: auto;
+}
+.info-wrapper{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+.support-text{
+    width: 45%;
+}
+.location-image p, .support-text p{
+    margin-bottom: 10px;
+}
+.text-info{
+    display: flex;
+    flex-direction: column;
+}
+.text-info h2{
+    font-size: 40px;
+    font-weight: 700 bold;
+    line-height: 1.2;
+}
+.location-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    
+}
+.location-image{
+    width: 45%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.image-wrapper{
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+.location-image h3{
+    font-size: 25px;
+}
+
+.cta-content{
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+
 }

@@ -7,10 +7,14 @@ const slides = document.querySelectorAll('.hero-slide');
 
 function showSlide(n) {
     slides.forEach(slide => {
-        slide.classList.remove('active'); // Remove 'active' class from all slides
+        slide.style.opacity = 0; // Hide all slides
+        slide.style.display = 'none';
     });
     slideIndex = (n + slides.length) % slides.length;
-    slides[slideIndex].classList.add('active'); // Add 'active' class to the current slide
+    slides[slideIndex].style.display = 'flex'; // Change display property to flex
+    setTimeout(() => {
+        slides[slideIndex].style.opacity = 1; // Show current slide with fade-in effect
+    }, 50); // Delay for smooth transition
 }
 
 function prevSlide() {
@@ -22,7 +26,7 @@ function nextSlide() {
 }
 
 // Auto rotate slides every 5 seconds
-setInterval(nextSlide, 4000);
+setInterval(nextSlide, 3000);
 
 // Show initial slide
 showSlide(slideIndex);
