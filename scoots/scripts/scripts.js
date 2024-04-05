@@ -112,6 +112,9 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey
           white: baseURL + social.whiteIconURL,
           color: baseURL + social.colorIconURL
         };
+  
+        // Set the default background image (white icon) for each social media icon
+        document.querySelector(`.social-icon[data-social="${social.social}"]`).style.backgroundImage = `url(${socialIcons[social.social].white})`;
       });
   
       // Add event listeners to each social media icon
@@ -131,6 +134,7 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey
       console.error('There was a problem fetching the JSON data:', error);
     });
   
+
 
 
 const currentYear = new Date().getFullYear();
