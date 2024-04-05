@@ -337,6 +337,8 @@ footer{
 }
 .footer-wrapper{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .footer-logo{
     width: 5%;
@@ -365,8 +367,8 @@ footer{
 
 .social-icons a {
     display: block;
-    width: 40px; /* Adjust icon size */
-    height: 40px; /* Adjust icon size */
+    width: 30px; /* Adjust icon size */
+    height: 30px; /* Adjust icon size */
     background-repeat: no-repeat;
     background-size: cover;
     transition: background-image 0.3s ease;

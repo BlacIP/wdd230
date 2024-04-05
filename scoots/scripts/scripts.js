@@ -1,6 +1,17 @@
 function closeBanner() {
+    // Hide the banner
     document.querySelector('.banner').style.display = 'none';
+    // Store the state in localStorage
+    localStorage.setItem('bannerClosed', 'true');
 }
+// Check if the banner was closed previously
+window.addEventListener('load', () => {
+    const bannerClosed = localStorage.getItem('bannerClosed');
+    if (bannerClosed === 'true') {
+        document.querySelector('.banner').style.display = 'none';
+    }
+});
+
 
 let slideIndex = 0;
 const slides = document.querySelectorAll('.hero-slide');
@@ -93,6 +104,28 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey
     console.error('Error fetching next day forecast:', error);
   });
 
+
+  // Fetch current weather data
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+.then(response => response.json())
+.then(data => {
+  // Find the maximum temperature for the current day
+  const maxTemp = data.main.temp_max;
+
+  // Update the banner message with the high temperature
+  const bannerMessage = `Today's high temperature: ${maxTemp}°C`;
+  document.querySelector('.banner p').textContent = bannerMessage;
+})
+.catch(error => {
+  console.error('Error fetching current weather:', error);
+});
+
+// Function to close the banner
+function closeBanner() {
+document.querySelector('.banner').style.display = 'none';
+}
+
+
   const baseURL = "https://blacip.github.io/wdd230/";
   const linksURL = "https://blacip.github.io/wdd230/scoots/data/socials.json";
   
@@ -138,7 +171,7 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey
 
 
 const currentYear = new Date().getFullYear();
-document.querySelector('.footer-bottom p').textContent = `© ${currentYear} | Lekki Chamber of Commerce | Boluwatife Adebiyi Omotoyinbo | WDD230 Project`;
+document.querySelector('.footer-bottom p').textContent = `© ${currentYear} | Scoots - A Motor Scooter Rental Company | Boluwatife Adebiyi Omotoyinbo | WDD230 Project`;
 
 
 const lastModifiedDate = document.lastModified;
