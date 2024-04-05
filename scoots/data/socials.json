@@ -7,12 +7,12 @@
     {
       "social": "instagram",
       "whiteIconURL": "scoots/images/instagram.png",
-      "colorIconURL": "scoots/mages/instagram-color.png"
+      "colorIconURL": "scoots/images/instagram-color.png"
     },
     {
       "social": "twitter",
-      "whiteIconURL": "scoots/images/twitter.png",
-      "colorIconURL": "scoots/images/twitter-color.png"
+      "whiteIconURL": "scoots/images/x.png",
+      "colorIconURL": "scoots/images/x-color.png"
     }
   ]
   
