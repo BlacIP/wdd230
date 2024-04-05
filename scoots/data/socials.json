@@ -1,18 +1,18 @@
 [
     {
       "social": "facebook",
-      "whiteIconURL": "images/facebook.png",
-      "colorIconURL": "images/facebook-color.png"
+      "whiteIconURL": "scoots/images/facebook.png",
+      "colorIconURL": "scoots/images/facebook-color.png"
     },
     {
       "social": "instagram",
-      "whiteIconURL": "images/instagram.png",
-      "colorIconURL": "images/instagram-color.png"
+      "whiteIconURL": "scoots/images/instagram.png",
+      "colorIconURL": "scoots/mages/instagram-color.png"
     },
     {
       "social": "twitter",
-      "whiteIconURL": "images/twitter.png",
-      "colorIconURL": "images/twitter-color.png"
+      "whiteIconURL": "scoots/images/twitter.png",
+      "colorIconURL": "scoots/images/twitter-color.png"
     }
   ]
   
