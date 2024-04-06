@@ -4,14 +4,12 @@ const apiKey = '335693caab24c80dc3e31365307b3f55';
 const city = 'cozumel';
 
 // Fetch current weather data
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+const currentWeatherPromise = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
   .then(response => response.json())
   .then(data => {
-
     const maxTemp = data.main.temp_max;
     const bannerMessage = `Today's high temperature: ${maxTemp}°C`;
     document.querySelector('.banner p').textContent = bannerMessage;
-
 
     document.getElementById('current-temperature').innerHTML = ` ${data.main.temp}°C`;
     document.getElementById('current-humidity').innerHTML = `Humidity: ${data.main.humidity}%`;
@@ -35,12 +33,16 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
     document.getElementById('current-country').innerHTML = `, ${data.sys.country}`;
   });
 
-
-// Fetch next day's forecast at 15:00
-fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`)
+// Fetch next day's forecast data
+const forecastPromise = fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`)
   .then(response => response.json())
   .then(data => {
-    const forecast = data.list.find(item => item.dt_txt.includes("15:00:00"));
+    console.log(data); // Log the entire data object to the console
+
+    const forecast = data.list.find(item => {
+      const dt_txt = item.dt_txt;
+      return dt_txt && dt_txt.includes("15:00:00");
+    });
 
     if (forecast) {
       const tomorrowDate = new Date(forecast.dt_txt);
@@ -60,7 +62,10 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey
       // Handle case when forecast data is not available
       console.error('Error fetching next day forecast: Forecast data is undefined');
     }
-  })
+  });
+
+// Wait for both promises to resolve using Promise.all()
+Promise.all([currentWeatherPromise, forecastPromise])
   .catch(error => {
-    console.error('Error fetching next day forecast:', error);
+    console.error('Error fetching weather data:', error);
   });

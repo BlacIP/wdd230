@@ -26,9 +26,10 @@ body {
     margin: auto
 }
 header{
-    position: fixed;
+    position: sticky;
     width: 100%;
-    z-index: 1000;
+    top: 0;
+    z-index: 1000
 }
 
 .banner {
@@ -446,6 +447,75 @@ footer{
 }
 
 
-/* .rentals{
-    margin: 50px;
+/* Rentals CSS */
+.product-banner{
+    padding: 30px 0;
+    background-color: var(--black);
+    color: var(--wite-smoke);
+}
+.text-container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: auto;
+}
+.text-container h1{
+    font-size: 38px;
+    line-height: 44px;
+    font-weight: 700 bold;
+}
+
+.rentals-hero {
+    padding-top: 65px;
+}
+
+.rentals-hero-wrapper {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: auto;
+    overflow: visible;
+    position: static;
+}
+
+.rentals-hero-content {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.rentals-hero-img {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.rentals-hero-content img {
+    width: 100%;
+    object-fit: cover;
+    position: relative; 
+    z-index: -1;
+}
+/* .hero-feature {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
 } */
+.feature-item{
+    position: absolute;
+    top: 8%;
+    right: 1%;
+    padding: 5px 20px;
+    margin-right: 10px;
+    background-color: var(--wite-smoke);
+    border-radius: 5px;
+}
+.feature-text{
+    position: absolute;
+    left: 2%;
+    bottom: 6%;
+}
+.feature-text h3{
+    font-size: 24px;
+    height: 30px;
+    font-weight: 700;
+    margin: 20px 0 5px 0;
+}
