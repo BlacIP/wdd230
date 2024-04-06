@@ -1,129 +1,73 @@
 function closeBanner() {
-    // Hide the banner
     document.querySelector('.banner').style.display = 'none';
-    // Store the state in localStorage
-    localStorage.setItem('bannerClosed', 'true');
-}
-// Check if the banner was closed previously
-window.addEventListener('load', () => {
-    const bannerClosed = localStorage.getItem('bannerClosed');
-    if (bannerClosed === 'true') {
-        document.querySelector('.banner').style.display = 'none';
-    }
-});
-
-
-let slideIndex = 0;
-const slides = document.querySelectorAll('.hero-slide');
-
-function showSlide(n) {
-    slides.forEach(slide => {
-        slide.style.opacity = 0; // Hide all slides
-        slide.style.display = 'none';
-    });
-    slideIndex = (n + slides.length) % slides.length;
-    slides[slideIndex].style.display = 'flex'; // Change display property to flex
-    setTimeout(() => {
-        slides[slideIndex].style.opacity = 1; // Show current slide with fade-in effect
-    }, 50); // Delay for smooth transition
 }
 
-function prevSlide() {
-    showSlide(slideIndex - 1);
-}
 
-function nextSlide() {
-    showSlide(slideIndex + 1);
-}
+// // Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key
+// const apiKey = '335693caab24c80dc3e31365307b3f55';
+// // Replace 'YOUR_CITY' with your desired city name
+// const city = 'cozumel';
 
-// Auto rotate slides every 5 seconds
-setInterval(nextSlide, 3000);
+// // Fetch current weather data
+// fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+//   .then(response => response.json())
+//   .then(data => {
+//     document.getElementById('current-temperature').innerHTML = `Current Temperature: ${data.main.temp}°C`;
+//     document.getElementById('current-humidity').innerHTML = `Current Humidity: ${data.main.humidity}%`;
+//     document.getElementById('current-pressure').innerHTML = `Pressure: ${data.main.pressure} hPa`;
+//     document.getElementById('current-visibility').innerHTML = `Visibility: ${data.visibility} meters`;
+//     document.getElementById('current-wind-speed').innerHTML = `Wind Speed: ${data.wind.speed} m/s`;
+//     document.getElementById('current-wind-direction').innerHTML = `Wind Direction: ${data.wind.deg}°`;
+//     document.getElementById('current-cloudiness').innerHTML = `Cloudiness: ${data.clouds.all}%`;
+//     document.getElementById('current-weather-description').innerHTML = `Weather: ${data.weather[0].main} - ${data.weather[0].description}`;
+//     document.getElementById('current-weather-icon').src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 
-// Show initial slide
-showSlide(slideIndex);
-
-
-// Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key
-const apiKey = '335693caab24c80dc3e31365307b3f55';
-// Replace 'YOUR_CITY' with your desired city name
-const city = 'cozumel';
-
-// Fetch current weather data
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById('current-temperature').innerHTML = `Current Temperature: ${data.main.temp}°C`;
-    document.getElementById('current-humidity').innerHTML = `Current Humidity: ${data.main.humidity}%`;
-    document.getElementById('current-pressure').innerHTML = `Pressure: ${data.main.pressure} hPa`;
-    document.getElementById('current-visibility').innerHTML = `Visibility: ${data.visibility} meters`;
-    document.getElementById('current-wind-speed').innerHTML = `Wind Speed: ${data.wind.speed} m/s`;
-    document.getElementById('current-wind-direction').innerHTML = `Wind Direction: ${data.wind.deg}°`;
-    document.getElementById('current-cloudiness').innerHTML = `Cloudiness: ${data.clouds.all}%`;
-    document.getElementById('current-weather-description').innerHTML = `Weather: ${data.weather[0].main} - ${data.weather[0].description}`;
-    document.getElementById('current-weather-icon').src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
-
-    // Additional data points
-    document.getElementById('current-coordinates').innerHTML = `Coordinates: [${data.coord.lat}, ${data.coord.lon}]`;
-    document.getElementById('current-sunrise').innerHTML = `Sunrise: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString()}`;
-    document.getElementById('current-sunset').innerHTML = `Sunset: ${new Date(data.sys.sunset * 1000).toLocaleTimeString()}`;
-    document.getElementById('current-date').innerHTML = `Date: ${new Date(data.dt * 1000).toDateString()}`;
-    document.getElementById('current-timezone').innerHTML = `Timezone: ${data.timezone}`;
+//     // Additional data points
+//     document.getElementById('current-coordinates').innerHTML = `Coordinates: [${data.coord.lat}, ${data.coord.lon}]`;
+//     document.getElementById('current-sunrise').innerHTML = `Sunrise: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString()}`;
+//     document.getElementById('current-sunset').innerHTML = `Sunset: ${new Date(data.sys.sunset * 1000).toLocaleTimeString()}`;
+//     document.getElementById('current-date').innerHTML = `Date: ${new Date(data.dt * 1000).toDateString()}`;
+//     document.getElementById('current-timezone').innerHTML = `Timezone: ${data.timezone}`;
     
-    // City name and country
-    document.getElementById('current-city').innerHTML = `City: ${data.name}`;
-    document.getElementById('current-country').innerHTML = `Country: ${data.sys.country}`;
-  });
+//     // City name and country
+//     document.getElementById('current-city').innerHTML = `City: ${data.name}`;
+//     document.getElementById('current-country').innerHTML = `Country: ${data.sys.country}`;
+
+//     const maxTemp = data.main.temp_max;
+//     const bannerMessage = `Today's high temperature: ${maxTemp}°C`;
+//     document.querySelector('.banner p').textContent = bannerMessage;
+//   });
 
 
-// Fetch next day's forecast at 15:00
-fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`)
-  .then(response => response.json())
-  .then(data => {
-    const forecast = data.list.find(item => item.dt_txt.includes("15:00:00"));
+// // Fetch next day's forecast at 15:00
+// fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`)
+//   .then(response => response.json())
+//   .then(data => {
+//     const forecast = data.list.find(item => item.dt_txt.includes("15:00:00"));
 
-    if (forecast) {
-      const tomorrowDate = new Date(forecast.dt_txt);
+//     if (forecast) {
+//       const tomorrowDate = new Date(forecast.dt_txt);
       
-      document.getElementById('next-day-forecast-temp').innerHTML = `Forecasted Temperature at 15:00: ${forecast.main.temp}°C`;
-      document.getElementById('next-day-forecast-humidity').innerHTML = `Humidity: ${forecast.main.humidity}%`;
-      document.getElementById('next-day-forecast-pressure').innerHTML = `Pressure: ${forecast.main.pressure} hPa`;
-      document.getElementById('next-day-forecast-cloudiness').innerHTML = `Cloudiness: ${forecast.clouds.all}%`;
-      document.getElementById('next-day-forecast-wind-speed').innerHTML = `Wind Speed: ${forecast.wind.speed} m/s`;
-      document.getElementById('next-day-forecast-wind-direction').innerHTML = `Wind Direction: ${forecast.wind.deg}°`;
-      document.getElementById('next-day-forecast-description').innerHTML = `Weather: ${forecast.weather[0].main} - ${forecast.weather[0].description}`;
-      document.getElementById('next-day-forecast-icon').src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
+//       document.getElementById('next-day-forecast-temp').innerHTML = `Forecasted Temperature at 15:00: ${forecast.main.temp}°C`;
+//       document.getElementById('next-day-forecast-humidity').innerHTML = `Humidity: ${forecast.main.humidity}%`;
+//       document.getElementById('next-day-forecast-pressure').innerHTML = `Pressure: ${forecast.main.pressure} hPa`;
+//       document.getElementById('next-day-forecast-cloudiness').innerHTML = `Cloudiness: ${forecast.clouds.all}%`;
+//       document.getElementById('next-day-forecast-wind-speed').innerHTML = `Wind Speed: ${forecast.wind.speed} m/s`;
+//       document.getElementById('next-day-forecast-wind-direction').innerHTML = `Wind Direction: ${forecast.wind.deg}°`;
+//       document.getElementById('next-day-forecast-description').innerHTML = `Weather: ${forecast.weather[0].main} - ${forecast.weather[0].description}`;
+//       document.getElementById('next-day-forecast-icon').src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
   
-      // Additional data points
-      document.getElementById('next-day-forecast-date').innerHTML = `Date: ${tomorrowDate.toDateString()}`;
-    } else {
-      // Handle case when forecast data is not available
-      console.error('Error fetching next day forecast: Forecast data is undefined');
-    }
-  })
-  .catch(error => {
-    console.error('Error fetching next day forecast:', error);
-  });
+//       // Additional data points
+//       document.getElementById('next-day-forecast-date').innerHTML = `Date: ${tomorrowDate.toDateString()}`;
+//     } else {
+//       // Handle case when forecast data is not available
+//       console.error('Error fetching next day forecast: Forecast data is undefined');
+//     }
+//   })
+//   .catch(error => {
+//     console.error('Error fetching next day forecast:', error);
+//   });
 
-
-  // Fetch current weather data
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
-.then(response => response.json())
-.then(data => {
-  // Find the maximum temperature for the current day
-  const maxTemp = data.main.temp_max;
-
-  // Update the banner message with the high temperature
-  const bannerMessage = `Today's high temperature: ${maxTemp}°C`;
-  document.querySelector('.banner p').textContent = bannerMessage;
-})
-.catch(error => {
-  console.error('Error fetching current weather:', error);
-});
-
-// Function to close the banner
-function closeBanner() {
-document.querySelector('.banner').style.display = 'none';
-}
 
 
   const baseURL = "https://blacip.github.io/wdd230/";
