@@ -1,4 +1,5 @@
-[
+{
+  "socialIcons": [
     {
       "social": "facebook",
       "whiteIconURL": "scoots/images/facebook.png",
@@ -14,5 +15,24 @@
       "whiteIconURL": "scoots/images/x.png",
       "colorIconURL": "scoots/images/x-color.png"
     }
+  ],
+  "featuredItems": [
+    {
+      "name": "Honda",
+      "price": "13 USD",
+      "image": "images/honda.jpg"
+    },
+    {
+      "name": "Yamaha",
+      "price": "15 USD",
+      "image": "images/yamaha.jpg"
+    },
+    {
+      "name": "Suzuki",
+      "price": "12 USD",
+      "image": "images/suzuki.jpg"
+    }
   ]
+}
+
   
