@@ -20,17 +20,17 @@
     {
       "name": "Honda",
       "price": "13 USD",
-      "image": "images/honda.jpg"
+      "image": "scoots/images/scoot-3.jpeg"
     },
     {
       "name": "Yamaha",
       "price": "15 USD",
-      "image": "images/yamaha.jpg"
+      "image": "scoots/images/scoot-5.jpeg"
     },
     {
       "name": "Suzuki",
       "price": "12 USD",
-      "image": "images/suzuki.jpg"
+      "image": "scoots/images/scoot-7.jpeg"
     }
   ]
 }
