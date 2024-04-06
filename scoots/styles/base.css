@@ -9,7 +9,7 @@
     --red: #e53935;
     --steel-blue: #1976d2;
     --dim-grey: #525252;
-    --light-grey: #838383;
+    --light-grey: #8383832d;
     --medium-sea-grean: #20c788;
 }
 
@@ -165,7 +165,7 @@ nav{
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    color: white;
+    color: var(--wite-smoke);
     width: 1200px;
     margin: auto;
     padding: 0 15px;
@@ -303,6 +303,7 @@ nav{
     display: flex;
     justify-content: space-between;
     text-align: left;
+    gap: 30px;
 }
 
 .weather-card {
@@ -310,19 +311,89 @@ nav{
     min-height: 200px;
     /* max-width: 400px; */
     /* margin: 20px auto; */
-    border: 1px solid #ccc;
+    border: 1px solid var(--light-grey);
     border-radius: 8px;
-    padding: 20px 60px;
+    padding: 20px 30px;
+    background-color: var(--indian-red);
+    color: var(--wite-smoke);
     /* text-align: center; */
 }
 
 .weather-card h2 {
     margin-bottom: 10px;
 }
+#current-weather{
+    width: 70%;
+}
+.current-card{
+    display: flex;
+    flex-direction: column;
+}
+.city-country{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 18px;
+}
+.current-info{
+    display: flex;
+    flex-direction: column;
+    /* grid-template-rows: 1fr 30%; */
+
+}
+.info-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+    border-bottom: solid white .5px;
+    border-top: solid white .5px;
+    margin:10px 0 10px 0;
+}
+.rest-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0; /* Remove the gap */
+    text-align: left;
+    /* border: solid var(--dim-grey); */
+    border-radius: 4px; /* Add border-radius for a rounded table look */
+    overflow: hidden; /* Hide any overflow */
+}
+  
+.rest-info > div {
+    padding: 10px;
+    border-bottom: .2px solid var(--wite-smoke);
+    border-right: .05px dashed var(--wite-smoke);
+    background-color: var(--light-grey); /* Set a background color for better contrast */
+}
+
+.rest-info > div:nth-child(4),
+.rest-info > div:nth-child(8){
+    border-right: none;
+}
+  
+.rest-info > div:nth-last-child(2),
+.rest-info > div:last-child {
+    border-bottom: none; /* Remove the bottom border from the last child */
+}
+
+.forecast-info >div:nth-child(3){
+    border-right: .05px dashed var(--wite-smoke);
+}
+
+.forecast-info >div:nth-child(2),
+.forecast-info >div:nth-child(4){
+    border-right: none;
+}
+.forecast-info >div:nth-child(4){
+    border-bottom: .2px solid var(--wite-smoke);
+}
 
 .weather-card img {
     width: 50px;
     height: 50px;
+}
+[id$="-description"] {
+    text-transform: capitalize;
 }
 
 footer{

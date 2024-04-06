@@ -162,37 +162,55 @@
         </section>
         <section class="four">
             <section class="weather-wrapper">
-              <div class="weather-card" id="current-weather">
-                <h2>Current Weather</h2>
-                <div id="current-city"></div>
-                <div id="current-country"></div>
-                <div id="current-temperature"></div>
-                <div id="current-humidity"></div>
-                <div id="current-pressure"></div>
-                <div id="current-visibility"></div>
-                <div id="current-wind-speed"></div>
-                <div id="current-wind-direction"></div>
-                <div id="current-cloudiness"></div>
-                <div id="current-weather-description"></div>
-                <div id="current-coordinates"></div>
-                <div id="current-sunrise"></div>
-                <div id="current-sunset"></div>
-                <div id="current-date"></div>
-                <div id="current-timezone"></div>
-                <img src="" alt="Weather Icon" id="current-weather-icon">
-              </div>
-              <div class="weather-card" id="next-day-forecast">
-                <h2>Next Day's Forecast at 15:00</h2>
-                <div id="next-day-forecast-temp"></div>
-                <div id="next-day-forecast-humidity"></div>
-                <div id="next-day-forecast-pressure"></div>
-                <div id="next-day-forecast-cloudiness"></div>
-                <div id="next-day-forecast-wind-speed"></div>
-                <div id="next-day-forecast-wind-direction"></div>
-                <div id="next-day-forecast-description"></div>
-                <div id="next-day-forecast-date"></div>
-                <img src="" alt="Weather Icon" id="next-day-forecast-icon">
-              </div>
+                <div class="weather-card" id="current-weather">
+                    <h2>Current Weather</h2>
+                    <div class="current-card">
+                        <div class="city-country">
+                            <div id="current-city"></div>
+                            <div id="current-country"></div>
+                            <div id="current-date"></div>
+                        </div> 
+                        <div class="current-info">
+                            <div class="info-card">
+                                <div id="current-temperature"></div>
+                                <img src="" alt="Weather Icon" id="current-weather-icon">
+                                <div id="current-weather-description"></div>
+                            </div>
+                            <!-- <hr> -->
+                            <div class="rest-info">
+                                <div id="current-humidity"></div>
+                                <div id="current-pressure"></div>
+                                <div id="current-visibility"></div>
+                                <div id="current-wind-speed"></div>
+                                <div id="current-wind-direction"></div>
+                                <div id="current-cloudiness"></div>
+                                <div id="current-coordinates"></div>
+                                <div id="current-sunrise"></div>
+                                <div id="current-sunset"></div>
+                                <!-- <div id="current-date"></div> -->
+                                <div id="current-timezone"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-card" id="next-day-forecast">
+                    <h2>Next Day's Forecast at 15:00</h2>
+                    <div class="current-info">
+                        <div class="info-card">
+                            <div id="next-day-forecast-temp"></div>
+                            <img src="" alt="Weather Icon" id="next-day-forecast-icon">
+                            <div id="next-day-forecast-description"></div>
+                        </div>
+                        <div class="rest-info forecast-info">
+                            <div id="next-day-forecast-humidity"></div>
+                            <div id="next-day-forecast-pressure"></div>
+                            <div id="next-day-forecast-cloudiness"></div>
+                            <div id="next-day-forecast-wind-speed"></div>
+                            <div id="next-day-forecast-wind-direction"></div>
+                            <!-- <div id="next-day-forecast-date"></div> -->
+                        </div>
+                    </div>
+                </div>
             </section>
           </section>
     </main>
