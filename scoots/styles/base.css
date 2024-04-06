@@ -484,7 +484,7 @@ footer{
 }
 
 .rentals-hero-img {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    background-image: linear-gradient(to top, rgba(199, 7, 7, 0.7), transparent);
 }
 
 .rentals-hero-content img {
@@ -493,12 +493,6 @@ footer{
     position: relative; 
     z-index: -1;
 }
-/* .hero-feature {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: #fff;
-} */
 .feature-item{
     position: absolute;
     top: 8%;
@@ -518,4 +512,26 @@ footer{
     height: 30px;
     font-weight: 700;
     margin: 20px 0 5px 0;
+}
+/* Left and Right Buttons */
+.left-button,
+.right-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--dim-grey);
+    background-color: rgba(226, 226, 226, 0.633);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.left-button {
+    left: 10px;
+}
+
+.right-button {
+    right: 10px;
 }
