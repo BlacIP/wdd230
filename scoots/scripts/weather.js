@@ -1,7 +1,6 @@
 // Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key
-const apiKey = '335693caab24c80dc3e31365307b3f55';
-// Replace 'YOUR_CITY' with your desired city name
-const city = 'cozumel';
+// const apiKey = '335693caab24c80dc3e31365307b3f55';
+// const city = 'cozumel';
 
 // Fetch current weather data
 const currentWeatherPromise = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
@@ -37,7 +36,7 @@ const currentWeatherPromise = fetch(`https://api.openweathermap.org/data/2.5/wea
 const forecastPromise = fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`)
   .then(response => response.json())
   .then(data => {
-    console.log(data); // Log the entire data object to the console
+    // console.log(data); // Log the entire data object to the console
 
     const forecast = data.list.find(item => {
       const dt_txt = item.dt_txt;

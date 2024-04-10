@@ -187,6 +187,7 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    border-radius: 10px;
 }
 
 .cta-content h1, .hero-content h1{
@@ -248,7 +249,7 @@ nav{
     align-items: stretch;
     
 }
-.product-image, .location-image{
+.location-image{
     width: 45%;
     min-height: 200px;
     display: flex;
@@ -290,7 +291,7 @@ nav{
 }
 
 .product-image{
-    width: 30%;
+    width: 32%;
     min-height: 200px;
     display: flex;
     flex-direction: column;
@@ -587,4 +588,8 @@ footer{
     justify-content: flex-start !important; 
     align-items: stretch;
     gap: 5%;
+}
+.product-image p{
+    text-align: center;
+    margin: 5px 0 10px 0;
 }
