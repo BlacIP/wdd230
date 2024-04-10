@@ -51,8 +51,8 @@
     {
       "type": "Jeeps",
       "details": [
-        { "name": "Jeep Wrangler - 4 door manuel with A/C", "capacity": "5 person", "image": "scoots/images/scoot-12.jpeg" },
-        { "name": "Jeep Wrangler - 2 door - open air - manuel", "capacity": "4 person", "image": "scoots/images/scoot-13.jpeg"}
+        { "name": "Jeep Wrangler", "cc": "4 door manuel with A/C", "capacity": "5 person", "image": "scoots/images/scoot-12.jpeg" },
+        { "name": "Jeep Wrangler", "cc":"2 door - open air - manuel", "capacity": "4 person", "image": "scoots/images/scoot-13.jpeg"}
       ]
     }
   ],

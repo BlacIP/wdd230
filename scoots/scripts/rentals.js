@@ -52,55 +52,40 @@ fetch(linksURL)
     return response.json();
   })
   .then(data => {
-    // Generate HTML for each rental type
-    data.rentals.forEach(rental => {
-      const sidebarBtn = document.createElement('button');
-      sidebarBtn.classList.add('sidebar-btn');
-      sidebarBtn.textContent = rental.type;
-      sidebarBtn.setAttribute('data-content', rental.type.toLowerCase().replace(/\s+/g, '-'));
-      document.querySelector('.sidebar').appendChild(sidebarBtn);
+    // Update existing HTML elements with data from JSON
+    const sidebarBtns = document.querySelectorAll('.sidebar-btn');
+    const contents = document.querySelectorAll('.content');
 
-      const contentDiv = document.createElement('div');
-      contentDiv.classList.add('content');
-      contentDiv.setAttribute('id', rental.type.toLowerCase().replace(/\s+/g, '-'));
-      document.querySelector('.content-wrapper').appendChild(contentDiv);
+    data.rentals.forEach((rental, index) => {
+      sidebarBtns[index].textContent = rental.type;
+      sidebarBtns[index].setAttribute('data-content', `content${index + 1}`);
 
-      const productWrapper = document.createElement('div');
-      productWrapper.classList.add('product-wrapper');
-      contentDiv.appendChild(productWrapper);
+      const contentDiv = contents[index];
+      contentDiv.id = `content${index + 1}`;
+      contentDiv.classList.remove('active');
+      if (index === 0) {
+        contentDiv.classList.add('active');
+      }
 
-      rental.details.forEach(detail => {
-        const productImageDiv = document.createElement('div');
-        productImageDiv.classList.add('product-image');
-        productWrapper.appendChild(productImageDiv);
-
-        const imageWrapperDiv = document.createElement('div');
-        imageWrapperDiv.classList.add('image-wrapper');
-        productImageDiv.appendChild(imageWrapperDiv);
-
-        const image = document.createElement('img');
+      const productImages = contentDiv.querySelectorAll('.product-image');
+      rental.details.forEach((detail, i) => {
+        const productImageDiv = productImages[i];
+        const image = productImageDiv.querySelector('img');
         image.src = baseURL + detail.image;
         image.alt = detail.name;
-        imageWrapperDiv.appendChild(image);
 
-        const h3 = document.createElement('h3');
-        h3.textContent = rental.type;
-        productImageDiv.appendChild(h3);
+        const h3 = productImageDiv.querySelector('h3');
+        h3.textContent = detail.name;
 
-        const ul = document.createElement('ul');
-        detail.description = `${detail.name} (${detail.cc || ''}) - ${detail.capacity}`;
-        const descriptionArray = detail.description.split(' - ');
-        descriptionArray.forEach(description => {
-          const li = document.createElement('li');
-          li.textContent = description;
-          ul.appendChild(li);
-        });
-        productImageDiv.appendChild(ul);
+        const ul = productImageDiv.querySelector('ul');
+        ul.parentNode.removeChild(ul);
 
-        const a = document.createElement('a');
+        const p = document.createElement('p');
+        p.textContent = `(${detail.cc}) - ${detail.capacity}`;
+        productImageDiv.appendChild(p);
+
+        const a = productImageDiv.querySelector('a');
         a.href = "reservations.html";
-        a.textContent = "Make a Reservation";
-        productImageDiv.appendChild(a);
       });
     });
   })

@@ -548,7 +548,7 @@ footer{
 }
 .sidebar{
     padding-right: 25px;
-    width: 15%;
+    width: 20%;
 }
 .sidebar-btn{
     display: inline-block;
@@ -569,7 +569,7 @@ footer{
 }
 
 .content-wrapper {
-    width: 85%;
+    width: 80%;
     /* display: grid; */
 }
 
