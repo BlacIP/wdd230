@@ -32,7 +32,81 @@
       "price": "12 USD",
       "image": "scoots/images/scoot-7.jpeg"
     }
+  ],
+  "rentals": [
+    {
+      "type": "Honda Motor Scooters",
+      "details": [
+        { "name": "Honda Metropolitan", "cc": "49cc", "capacity": "1 person", "image": "scoots/images/scoot-8.jpeg" },
+        { "name": "Honda Dio", "cc": "110cc", "capacity": "2 person", "image": "scoots/images/scoot-9.webp" },
+        { "name": "Honda PCX150", "cc": "149cc", "capacity": "2 person", "image": "scoots/images/scoot-10.jpeg" }
+      ]
+    },
+    {
+      "type": "Side-by-Side ATVs",
+      "details": [
+        { "name": "Honda Pioneer 1000", "capacity": "4 person", "image": "scoots/images/scoot-11.jpeg" }
+      ]
+    },
+    {
+      "type": "Jeeps",
+      "details": [
+        { "name": "Jeep Wrangler - 4 door manuel with A/C", "capacity": "5 person", "image": "scoots/images/scoot-12.jpeg" },
+        { "name": "Jeep Wrangler - 2 door - open air - manuel", "capacity": "4 person", "image": "scoots/images/scoot-13.jpeg"}
+      ]
+    }
+  ],
+  "pricing": [
+    {
+      "rentalType": "Honda Metropolitan Scooter",
+      "maxPersons": 1,
+      "halfDayReservation": { "price": 20, "duration": 3 },
+      "fullDayReservation": 30,
+      "halfDayWalkIn": { "price": 25, "duration": 3 },
+      "fullDayWalkIn": 35
+    },
+    {
+      "rentalType": "Honda Dio",
+      "maxPersons": 2,
+      "halfDayReservation": { "price": 30, "duration": 3 },
+      "fullDayReservation": 40,
+      "halfDayWalkIn": { "price": 35, "duration": 3 },
+      "fullDayWalkIn": 45
+    },
+    {
+      "rentalType": "Honda PCX150",
+      "maxPersons": 2,
+      "halfDayReservation": { "price": 40, "duration": 3 },
+      "fullDayReservation": 50,
+      "halfDayWalkIn": { "price": 45, "duration": 3 },
+      "fullDayWalkIn": 55
+    },
+    {
+      "rentalType": "Honda Pioneer ATV",
+      "maxPersons": 4,
+      "halfDayReservation": { "price": 50, "duration": 3 },
+      "fullDayReservation": 70,
+      "halfDayWalkIn": { "price": 60, "duration": 3 },
+      "fullDayWalkIn": 80
+    },
+    {
+      "rentalType": "Jeep Wrangler - 4 door with a/c",
+      "maxPersons": 5,
+      "halfDayReservation": { "price": 70, "duration": 3 },
+      "fullDayReservation": 100,
+      "halfDayWalkIn": { "price": 85, "duration": 3 },
+      "fullDayWalkIn": 125
+    },
+    {
+      "rentalType": "Jeep Wrangler - 2 door",
+      "maxPersons": 4,
+      "halfDayReservation": { "price": 60, "duration": 3 },
+      "fullDayReservation": 85,
+      "halfDayWalkIn": { "price": 70, "duration": 3 },
+      "fullDayWalkIn": 90
+    }
   ]
+  
 }
 
   

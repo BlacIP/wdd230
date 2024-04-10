@@ -38,3 +38,72 @@ document.querySelectorAll('.sidebar-btn').forEach(btn => {
 });
 
 
+
+
+const baseURL = "https://blacip.github.io/wdd230/";
+const linksURL = "https://blacip.github.io/wdd230/scoots/data/scoots.json";
+
+// Fetch the JSON data
+fetch(linksURL)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Generate HTML for each rental type
+    data.rentals.forEach(rental => {
+      const sidebarBtn = document.createElement('button');
+      sidebarBtn.classList.add('sidebar-btn');
+      sidebarBtn.textContent = rental.type;
+      sidebarBtn.setAttribute('data-content', rental.type.toLowerCase().replace(/\s+/g, '-'));
+      document.querySelector('.sidebar').appendChild(sidebarBtn);
+
+      const contentDiv = document.createElement('div');
+      contentDiv.classList.add('content');
+      contentDiv.setAttribute('id', rental.type.toLowerCase().replace(/\s+/g, '-'));
+      document.querySelector('.content-wrapper').appendChild(contentDiv);
+
+      const productWrapper = document.createElement('div');
+      productWrapper.classList.add('product-wrapper');
+      contentDiv.appendChild(productWrapper);
+
+      rental.details.forEach(detail => {
+        const productImageDiv = document.createElement('div');
+        productImageDiv.classList.add('product-image');
+        productWrapper.appendChild(productImageDiv);
+
+        const imageWrapperDiv = document.createElement('div');
+        imageWrapperDiv.classList.add('image-wrapper');
+        productImageDiv.appendChild(imageWrapperDiv);
+
+        const image = document.createElement('img');
+        image.src = baseURL + detail.image;
+        image.alt = detail.name;
+        imageWrapperDiv.appendChild(image);
+
+        const h3 = document.createElement('h3');
+        h3.textContent = rental.type;
+        productImageDiv.appendChild(h3);
+
+        const ul = document.createElement('ul');
+        detail.description = `${detail.name} (${detail.cc || ''}) - ${detail.capacity}`;
+        const descriptionArray = detail.description.split(' - ');
+        descriptionArray.forEach(description => {
+          const li = document.createElement('li');
+          li.textContent = description;
+          ul.appendChild(li);
+        });
+        productImageDiv.appendChild(ul);
+
+        const a = document.createElement('a');
+        a.href = "reservations.html";
+        a.textContent = "Make a Reservation";
+        productImageDiv.appendChild(a);
+      });
+    });
+  })
+  .catch(error => {
+    console.error('There was a problem fetching the JSON data:', error);
+  });

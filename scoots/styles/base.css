@@ -583,5 +583,8 @@ footer{
     margin-bottom: 20px; /* Add margin between content items */
 }
 .content3{
-    justify-content: flex-start;
+    display: flex;
+    justify-content: flex-start !important; 
+    align-items: stretch;
+    gap: 5%;
 }
