@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Reservations - A Motor Scooter Rental Company</title>
+    <meta name="author" content="Boluwatife Adebiyi Omotoyinbo">
+    <meta name="description" content="Scoots - A Motor Scooter Rental Company located on the island of Cozumel 
+    off the coast of Mexico in the western Caribbean Sea.">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="scoots.ico">
+    <meta property="og:title" content="Scoots - A Motor Scooter Rental Company">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://blacip.github.io/wdd230/scoots/images/scoots-og.jpg">   
+    <meta property="og:url" content="https://blacip.github.io/wdd230/scoots">
+</head>
+<body>
+    <header>
+        <section class="banner">
+            <div class="banner-block">
+                <p></p>
+                <button class="close-btn" onclick="closeBanner()">x</button>
+            </div>
+        </section>
+        <nav>
+            <div class="nav-bar">
+                <section class="logo">
+                    <a href="index.html"> <img src="images/scoots.webp" alt="scots logo"></a>
+                 </section>  
+                 <section class="nav-menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="rentals.html">Rentals</a></li>
+                        <li><a href="reservations.html">Reservation</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                 </section>     
+            </div>
+        </nav>
+    </header>
+    <section class="hero-container">
+        <div class="hero-text">
+            <div  class="hero-content">
+                <h1> Your Adventure Awaits</h1>
+                <p> Scoots has everything you need to help 
+                    you get started today. Check out our wonderful 
+                    collection of gear that will make your next 
+                    adventure complete.</p>
+                <a href="reservations.html" >Make a Reservation</a>
+            </div>
+            
+        </div>
+         <div class="hero-slide">
+            <img src="images/scoots-og.jpg" alt="Image 1">
+        </div>
+    </section>
+    <main class="reservations">
+        <section class="one">
+            <section class="reserve">
+                <div class="reserve-wrapper">
+                    <div class="reserve-info">
+                        <h6> Why Scoots Outdoors? </h6>
+                        <h2> We’re the best in the business.</h2>
+                        <p> From more than 30 years, we’ve been leading 
+                            the way across Oklahoma — creating the best possible 
+                            customer experience since 1989.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="three">
+            <section class="rental-info">
+                <div class="reserve-info-wrapper">
+                    <div class="rental-agreement">
+                        <h2>Rental Services and Agreements </h2>
+                        <p>Insert rental agreement information here...</p>
+                    </div>
+                    <div class="reservation-form">
+                        <form action="submit-reservation.html" method="get" class="form-details">
+                            <div class="form-group">
+                                <label for="date">Date:</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="period">Period:</label>
+                                <select id="period" name="period" required>
+                                    <option value="half-day">Half Day</option>
+                                    <option value="full-day">Full Day</option>
+                                </select>
+                            </div>
+                            <!-- Other form fields -->
+                            <div class="form-group">
+                                <button type="submit">Submit Reservation</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+    <footer>
+        <section class="footer">
+            <div class="footer-wrapper">
+                <div class="footer-logo">
+                    <img src="images/scoots-white.webp" alt="scoots-logo">
+                </div>
+                <div class="social-wrapper">
+                    <ul class="social-icons">
+                        <li><a href="https://facebook.com" target="_blank" class="social-icon" data-social="facebook"></a></li>
+                        <li><a href="https://instagram.com" target="_blank" class="social-icon" data-social="instagram"></a></li>
+                        <li><a href="https://twitter.com" target="_blank" class="social-icon" data-social="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="year"></p>
+                <p id="lastModified"></p>
+            </div>
+        </section>
+
+    </footer>
+    <script src="scripts/getdates.js"></script>
+    <!-- <script src="scripts/weather.js"></script>
+    <script src="scripts/scripts.js"></script> -->
+</body>
+</html>
