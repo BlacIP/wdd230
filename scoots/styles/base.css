@@ -124,6 +124,9 @@ nav{
     overflow: hidden;
     background-image: linear-gradient(to top, rgb(0, 0, 0), transparent); /* Apply linear gradient to hero container */
 }
+.two{
+    margin-top: 60px;
+}
 
 .cta-image, .hero-slide {
     position: relative;
