@@ -1,3 +1,4 @@
+
 // Fetch current weather data
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
   .then(response => response.json())
@@ -10,7 +11,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
 
 document.querySelectorAll('.sidebar-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-      // Remove 'active' class from all buttons
+      
       document.querySelectorAll('.sidebar-btn').forEach(button => {
           button.classList.remove('active');
       });
@@ -33,10 +34,6 @@ document.querySelectorAll('.sidebar-btn').forEach(btn => {
 });
 
 
-
-
-// const baseURL = "https://blacip.github.io/wdd230/";
-// const linksURL = "https://blacip.github.io/wdd230/scoots/data/scoots.json";
 
 // Fetch the JSON data
 fetch(linksURL)
@@ -81,7 +78,7 @@ fetch(linksURL)
 
         const a = productImageDiv.querySelector('a');
         a.href = "reservations.html";
-        productImageDiv.appendChild(a); // Move the reservation link after the new paragraph
+        productImageDiv.appendChild(a); 
       });
     });
   })
@@ -138,14 +135,11 @@ function fetchData() {
                 const currentItem = featuredItems[currentItemIndex];
                 itemNameElement.textContent = currentItem.name;
                 itemPriceElement.textContent = currentItem.price;
-                // Ensure the image path is constructed correctly
                 itemImageElement.src = baseURL + currentItem.image;
                 itemImageElement.alt = currentItem.name;
             }
 
-            // Initial call to update the featured item
             updateFeaturedItem();
-
             // Function to handle click on left button
             function handleLeftButtonClick() {
                 currentItemIndex = (currentItemIndex - 1 + featuredItems.length) % featuredItems.length;
@@ -162,15 +156,60 @@ function fetchData() {
             leftButton.addEventListener('click', handleLeftButtonClick);
             rightButton.addEventListener('click', handleRightButtonClick);
 
-            // Function to automatically slide to the next item every 10 seconds
             function autoSlide() {
                 currentItemIndex = (currentItemIndex + 1) % featuredItems.length;
                 updateFeaturedItem();
             }
 
-            // Call autoSlide function every 10 seconds
             setInterval(autoSlide, 10000);
         })
         .catch(error => {
             console.error('There was a problem fetching the JSON data:', error);
         });
+
+
+
+
+fetch(linksURL)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    const pricing = data.pricing;
+    const tableBody = document.querySelector('.pricing-table tbody');
+
+    pricing.forEach(item => {
+      const row = document.createElement('tr');
+
+      const rentalTypeCell = document.createElement('td');
+      rentalTypeCell.textContent = item.rentalType;
+      row.appendChild(rentalTypeCell);
+
+      const halfDayReservationCell = document.createElement('td');
+      halfDayReservationCell.textContent = `$${item.halfDayReservation.price}`;
+      row.appendChild(halfDayReservationCell);
+
+      const fullDayReservationCell = document.createElement('td');
+      fullDayReservationCell.textContent = `$${item.fullDayReservation}`;
+      row.appendChild(fullDayReservationCell);
+
+      const halfDayWalkInCell = document.createElement('td');
+      halfDayWalkInCell.textContent = `$${item.halfDayWalkIn.price}`;
+      row.appendChild(halfDayWalkInCell);
+
+      const fullDayWalkInCell = document.createElement('td');
+      fullDayWalkInCell.textContent = `$${item.fullDayWalkIn}`;
+      row.appendChild(fullDayWalkInCell);
+
+      tableBody.appendChild(row);
+    });
+  })
+  .catch(error => {
+    console.error('There was a problem fetching the JSON data:', error);
+  });
+
+        
+
