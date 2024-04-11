@@ -10,6 +10,16 @@ function closeBanner() {
     document.querySelector('.banner').style.display = 'none';
 }
 
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+  .then(response => response.json())
+  .then(data => {
+
+    const maxTemp = data.main.temp_max;
+    const bannerMessage = `Today's high temperature: ${maxTemp}°C`;
+    document.querySelector('.banner p').textContent = bannerMessage;
+});
+
+
 function fetchDataFromServer() {
     return fetch(linksURL)
         .then(response => {
@@ -65,6 +75,8 @@ fetchData()
         console.error('There was a problem fetching the JSON data:', error);
     });
     
+
+
 
 
 

@@ -1,13 +1,13 @@
 
 // Fetch current weather data
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
-  .then(response => response.json())
-  .then(data => {
+// fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+//   .then(response => response.json())
+//   .then(data => {
 
-    const maxTemp = data.main.temp_max;
-    const bannerMessage = `Today's high temperature: ${maxTemp}°C`;
-    document.querySelector('.banner p').textContent = bannerMessage;
-});
+//     const maxTemp = data.main.temp_max;
+//     const bannerMessage = `Today's high temperature: ${maxTemp}°C`;
+//     document.querySelector('.banner p').textContent = bannerMessage;
+// });
 
 document.querySelectorAll('.sidebar-btn').forEach(btn => {
   btn.addEventListener('click', () => {

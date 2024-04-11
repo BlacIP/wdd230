@@ -2,9 +2,9 @@
 const currentWeatherPromise = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
   .then(response => response.json())
   .then(data => {
-    const maxTemp = data.main.temp_max;
-    const bannerMessage = `Today's high temperature: ${maxTemp}°C`;
-    document.querySelector('.banner p').textContent = bannerMessage;
+    // const maxTemp = data.main.temp_max;
+    // const bannerMessage = `Today's high temperature: ${maxTemp}°C`;
+    // document.querySelector('.banner p').textContent = bannerMessage;
 
     document.getElementById('current-temperature').innerHTML = ` ${data.main.temp}°C`;
     document.getElementById('current-humidity').innerHTML = `Humidity: ${data.main.humidity}%`;
@@ -14,7 +14,7 @@ const currentWeatherPromise = fetch(`https://api.openweathermap.org/data/2.5/wea
     document.getElementById('current-wind-direction').innerHTML = `Wind Direction: ${data.wind.deg}°`;
     document.getElementById('current-cloudiness').innerHTML = `Cloudiness: ${data.clouds.all}%`;
     document.getElementById('current-weather-description').innerHTML = `${data.weather[0].description}`;
-    document.getElementById('current-weather-icon').src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+    document.getElementById('current-weather-icon').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 
     // Additional data points
     document.getElementById('current-coordinates').innerHTML = `Coordinates: [${data.coord.lat}, ${data.coord.lon}]`;

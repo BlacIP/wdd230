@@ -7,10 +7,10 @@ function showSlide(n) {
         slide.style.display = 'none';
     });
     slideIndex = (n + slides.length) % slides.length;
-    slides[slideIndex].style.display = 'flex'; // Change display property to flex
+    slides[slideIndex].style.display = 'flex'; 
     setTimeout(() => {
-        slides[slideIndex].style.opacity = 1; // Show current slide with fade-in effect
-    }, 50); // Delay for smooth transition
+        slides[slideIndex].style.opacity = 1; 
+    }, 50); 
 }
 
 function prevSlide() {
@@ -28,24 +28,6 @@ setInterval(nextSlide, 3000);
 showSlide(slideIndex);
 
 
-// const locationWrappers = document.querySelectorAll('.location-wrapper');
-
-// locationWrappers.forEach(wrapper => {
-//   const locationImage = wrapper.querySelector('.location-image');
-//   const iframe = locationImage.nextElementSibling;
-//   if (iframe && iframe.tagName === 'DIV') {
-//     const iframeElement = iframe.querySelector('iframe');
-//     if (iframeElement) {
-//       wrapper.addEventListener('mouseenter', () => {
-//         iframeElement.style.display = 'block';
-//       });
-
-//       wrapper.addEventListener('mouseleave', () => {
-//         iframeElement.style.display = 'none';
-//       });
-//     }
-//   }
-// });
 const locationImages = document.querySelectorAll('.location-image');
 
 locationImages.forEach(locationImage => {
@@ -76,14 +58,14 @@ locationImages.forEach(locationImage => {
           const currentProductImage = productImages[index];
     
           const imageWrapper = currentProductImage.querySelector('.image-wrapper img');
-          imageWrapper.src = baseURL + rental.details[0].image; // Use the first image from details
+          imageWrapper.src = baseURL + rental.details[0].image; 
           imageWrapper.alt = rental.type;
     
           const h3 = currentProductImage.querySelector('h3');
           h3.textContent = rental.type;
     
           const ul = currentProductImage.querySelector('ul');
-          ul.innerHTML = ''; // Clear existing list items
+          ul.innerHTML = ''; 
     
           rental.details.forEach(detail => {
             const li = document.createElement('li');

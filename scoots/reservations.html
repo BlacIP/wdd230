@@ -80,20 +80,22 @@
             <section class="rental-info">
                 <div class="reserve-info-wrapper">
                     <div class="rental-agreement">
-                        <h2>Rental Services and Agreements </h2>
-                        <hr>
-                        <ul>
-                            <li>A $50 security deposit is required to confirm reservations.</li>
-                            <li>A valid driver's license is required in hand at the time of rental.</li>
-                            <li>No one under the age of 12 years of age is allowed to ride on the scooters.</li>
-                            <li>Fuel charge is not included.</li>
-                            <li>Unlimited mileage.</li>
-                            <li>Liability insurance is included.</li>
-                            <li>Damage insurance is available for purchase.</li>
-                            <li>Free delivery to Cozumel hotels or Airbnbs for 2+ day rentals.</li>
-                            <li>Payment via Google Pay, Apple Pay, cash, credit card, debit card, or Venmo.</li>
-                            <li>Rentals may be returned to either physical location.</li>
-                        </ul>
+                        <div class="inner-border">
+                            <h2>Rental Services and Agreements </h2>
+                            <hr>
+                            <ul>
+                                <li>A $50 security deposit is required to confirm reservations.</li>
+                                <li>A valid driver's license is required in hand at the time of rental.</li>
+                                <li>No one under the age of 12 years of age is allowed to ride on the scooters.</li>
+                                <li>Fuel charge is not included.</li>
+                                <li>Unlimited mileage.</li>
+                                <li>Liability insurance is included.</li>
+                                <li>Damage insurance is available for purchase.</li>
+                                <li>Free delivery to Cozumel hotels or Airbnbs for 2+ day rentals.</li>
+                                <li>Payment via Google Pay, Apple Pay, cash, credit card, debit card, or Venmo.</li>
+                                <li>Rentals may be returned to either physical location.</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="reservation-form">
                         <form action="submit-reservation.html" method="get" class="form-details">
@@ -108,10 +110,44 @@
                                     <option value="full-day">Full Day</option>
                                 </select>
                             </div>
-                            <!-- Other form fields -->
+                            <div class="form-group">
+                                <label for="rental-type">Rental Type:</label>
+                                <input type="text" id="rental-type" name="rental-type" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="number">Number:</label>
+                                <input type="number" id="number" name="number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number:</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Home State or Country:</label>
+                                <input type="text" id="country" name="country" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cruise-line">Cruise Line:</label>
+                                <input type="text" id="cruise-line" name="cruise-line">
+                            </div>
+                            <div class="form-group">
+                                <label for="special-accommodations">Special Accommodations/Comments:</label>
+                                <textarea id="special-accommodations" name="special-accommodations"></textarea>
+                            </div>
                             <div class="form-group">
                                 <button type="submit">Submit Reservation</button>
                             </div>
+                        </form>
+                    </div>
+                    
                         </form>
                     </div>
 
