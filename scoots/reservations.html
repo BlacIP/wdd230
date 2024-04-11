@@ -73,7 +73,7 @@
         </section>
         <section class="product-banner">
             <div class="text-container">
-                <h1> Browse Our Product</h1>
+                <h1> Reservations</h1>
             </div>
         </section>
         <section class="three">
@@ -106,13 +106,17 @@
                             <div class="form-group">
                                 <label for="period">Period:</label>
                                 <select id="period" name="period" required>
+                                    <option>Select Prefered Period</option>
                                     <option value="half-day">Half Day</option>
                                     <option value="full-day">Full Day</option>
                                 </select>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" id="rental-type-group">
                                 <label for="rental-type">Rental Type:</label>
-                                <input type="text" id="rental-type" name="rental-type" required>
+                                <select id="rental-type" name="rental-type" required>
+                                    <option>Select Prefered Rental type</option>
+                                    <!-- Rental types will be dynamically populated here -->
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="number">Number:</label>
@@ -146,6 +150,7 @@
                                 <button type="submit">Submit Reservation</button>
                             </div>
                         </form>
+                        
                     </div>
                     
                         </form>
@@ -180,6 +185,7 @@
 
     </footer>
     <script src="scripts/getdates.js"></script>
+    <script src="scripts/reservations.js"></script>
     <!-- <script src="scripts/weather.js"></script>
     <script src="scripts/scripts.js"></script> -->
 </body>
