@@ -120,7 +120,10 @@
                             </div>
                             <div class="form-group">
                                 <label for="number">Number:</label>
-                                <input type="number" id="number" name="number" required>
+                                <div class="phone-number-input">
+                                    <select id="country-code" name="country-code" aria-label="Select Country Code"></select>
+                                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number:</label>
@@ -128,11 +131,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="name" required placeholder="Please Enter your name here">
                             </div>
                             <div class="form-group">
                                 <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" required placeholder="example@email.com">
                             </div>
                             <div class="form-group">
                                 <label for="country">Home State or Country:</label>
@@ -144,24 +147,36 @@
                             </div>
                             <div class="form-group">
                                 <label for="special-accommodations">Special Accommodations/Comments:</label>
-                                <textarea id="special-accommodations" name="special-accommodations"></textarea>
+                                <textarea id="special-accommodations" name="special-accommodations" rows="7" cols="70" placeholder="Enter text here..."></textarea>
                             </div>
                             <div class="form-group">
-                                <button type="submit">Submit Reservation</button>
+                                <button type="submit">Make Reservation</button>
                             </div>
-                        </form>
-                        
-                    </div>
-                    
                         </form>
                     </div>
 
                 </div>
 
             </section>
-
         </section>
-
+        <section class="reserve-hero">
+            <div class="rentals-hero-wrapper">
+                <div  class="rentals-hero-content">
+                    <div class="rentals-hero-img">
+                        <img src="images/scoots-og.jpg" alt="Image 1">
+                    </div>
+                    <!-- <div class="hero-feature">
+                        <p class="feature-item"> Featured Item</p>
+                        <div class="feature-text">
+                            <h3> Honda</h3>
+                            <p class="feautured item price"> 13 USD</p>
+                        </div>
+                    </div>
+                    <button class="left-button">&#10094;</button>
+                    <button class="right-button">&#10095;</button>
+                </div>  -->
+            </div>
+        </section>
     </main>
     <footer>
         <section class="footer">
@@ -184,6 +199,7 @@
         </section>
 
     </footer>
+    <script src="node_modules/google-libphonenumber/dist/browser/libphonenumber.js"></script>
     <script src="scripts/getdates.js"></script>
     <script src="scripts/reservations.js"></script>
     <!-- <script src="scripts/weather.js"></script>

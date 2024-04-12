@@ -23,6 +23,12 @@ function populateRentalTypes(data, period) {
     const rentals = data.pricing.filter(item => item.halfDayReservation || item.fullDayReservation);
     rentalTypeSelect.innerHTML = ""; // Clear existing options
 
+    // Add the default option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = "";
+    defaultOption.textContent = "Select Preferred Rental Type";
+    rentalTypeSelect.appendChild(defaultOption);
+
     rentals.forEach(rental => {
         let price;
         if (period === 'half-day') {
@@ -39,6 +45,7 @@ function populateRentalTypes(data, period) {
         }
     });
 }
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -58,3 +65,31 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('There was a problem fetching the JSON data:', error);
         });
 });
+
+
+// Import the PhoneNumberUtil class from the google-libphonenumber library
+const { PhoneNumberUtil } = require('google-libphonenumber');
+
+// Get an instance of the PhoneNumberUtil class
+const phoneUtil = PhoneNumberUtil.getInstance();
+
+// Function to populate the country code dropdown
+function populateCountryCodeDropdown() {
+    // Get the select element for the country code
+    const countryCodeSelect = document.getElementById('country-code');
+
+    // Get a list of country codes
+    const countryCodes = phoneUtil.getSupportedRegions();
+
+    // Loop through the country codes and add them to the dropdown
+    countryCodes.forEach(countryCode => {
+        const option = document.createElement('option');
+        option.value = countryCode;
+        option.textContent = `+${phoneUtil.getCountryCodeForRegion(countryCode)}`;
+        countryCodeSelect.appendChild(option);
+    });
+}
+
+// Call the populateCountryCodeDropdown function to populate the dropdown
+populateCountryCodeDropdown();
+

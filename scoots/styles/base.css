@@ -698,22 +698,23 @@ label {
 
 input, select {
     width: 100%;
-    padding: 0.5rem;
+    padding: 10.8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
-button {
-    padding: 0.5rem 1rem;
+.form-group button {
+    padding: 15px 30px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    /* width: 100%; */
 }
 
-button:hover {
+.form-group button:hover {
     background-color: #0056b3;
 }
 .reservation-form,
@@ -754,5 +755,9 @@ button:hover {
     padding: 5px;
     padding-left: 10px;
     border-radius: 15px;
+  }
+
+  .reserve-hero{
+    padding-bottom: 65px;
   }
   
