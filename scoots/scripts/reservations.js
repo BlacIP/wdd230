@@ -67,29 +67,69 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Import the PhoneNumberUtil class from the google-libphonenumber library
-const { PhoneNumberUtil } = require('google-libphonenumber');
 
-// Get an instance of the PhoneNumberUtil class
-const phoneUtil = PhoneNumberUtil.getInstance();
+const baseURL = "https://blacip.github.io/wdd230/";
+const linksURL = "https://blacip.github.io/wdd230/scoots/data/phonelib.json";
 
-// Function to populate the country code dropdown
-function populateCountryCodeDropdown() {
-    // Get the select element for the country code
-    const countryCodeSelect = document.getElementById('country-code');
 
-    // Get a list of country codes
-    const countryCodes = phoneUtil.getSupportedRegions();
+// Select relevant elements
+const selectBox = document.querySelector('.options ol');
+const searchBox = document.querySelector('.search-box');
+const inputBox = document.querySelector('input[type="tel"]');
+const selectedOption = document.querySelector('.selected-option div');
 
-    // Loop through the country codes and add them to the dropdown
-    countryCodes.forEach(countryCode => {
-        const option = document.createElement('option');
-        option.value = countryCode;
-        option.textContent = `+${phoneUtil.getCountryCodeForRegion(countryCode)}`;
-        countryCodeSelect.appendChild(option);
+let options = null;
+
+// Fetch the JSON data
+fetch(countriesURL)
+    .then(response => response.json())
+    .then(data => {
+        options = data; // Assign the fetched data to the options variable
+
+        // Populate the country list dynamically
+        data.forEach(country => {
+            const option = `
+                <li class="option">
+                    <div>
+                        <span class="iconify" data-icon="flag:${country.code.toLowerCase()}-4x3"></span>
+                        <span class="country-name">${country.name}</span>
+                    </div>
+                    <strong>+${country.phone}</strong>
+                </li> `;
+            selectBox.insertAdjacentHTML('beforeend', option);
+        });
+
+        // Add event listeners
+        options.forEach(option => option.addEventListener('click', selectOption));
+        searchBox.addEventListener('input', searchCountry);
+    })
+    .catch(error => console.error('Error fetching data:', error));
+
+function selectOption() {
+    const icon = this.querySelector('.iconify').cloneNode(true);
+    const phoneCode = this.querySelector('strong').cloneNode(true);
+
+    selectedOption.innerHTML = '';
+    selectedOption.append(icon, phoneCode);
+
+    inputBox.value = phoneCode.innerText;
+
+    selectBox.classList.remove('active');
+    selectedOption.classList.remove('active');
+
+    searchBox.value = '';
+    selectBox.querySelectorAll('.hide').forEach(el => el.classList.remove('hide'));
+}
+
+function searchCountry() {
+    const searchQuery = searchBox.value.toLowerCase();
+    options.forEach(option => {
+        const isMatched = option.name.toLowerCase().includes(searchQuery);
+        option.classList.toggle('hide', !isMatched);
     });
 }
 
-// Call the populateCountryCodeDropdown function to populate the dropdown
-populateCountryCodeDropdown();
-
+selectedOption.addEventListener('click', () => {
+    selectBox.classList.toggle('active');
+    selectedOption.classList.toggle('active');
+});
