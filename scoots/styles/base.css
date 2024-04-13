@@ -10,6 +10,7 @@
     --steel-blue: #1976d2;
     --dim-grey: #525252;
     --light-grey: #8383832d;
+    --lighter-grey: #e8e8e8;
     --medium-sea-grean: #20c788;
 }
 
@@ -154,7 +155,7 @@ nav{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--lighter-grey);
     border: none;
     cursor: pointer;
     padding: 10px;
@@ -355,8 +356,8 @@ nav{
     align-items: center;
     justify-content: space-around;
     font-size: 20px;
-    border-bottom: solid white .5px;
-    border-top: solid white .5px;
+    border-bottom: solid var(--wite-smoke) .5px;
+    border-top: solid var(--wite-smoke) .5px;
     margin:10px 0 10px 0;
 }
 .rest-info {
@@ -534,7 +535,7 @@ footer{
     transform: translateY(-50%);
     font-size: 20px;
     color: var(--dim-grey);
-    background-color: rgba(226, 226, 226, 0.633);
+    background-color: var(--lighter-grey);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -760,162 +761,125 @@ input, select {
   .reserve-hero{
     padding-bottom: 65px;
   }
-  
-  /* .select-box {
-    position: relative;
-    width: 100%;
-}
-
-.select-box input {
-    width: 100%;
-    padding: 10px 5px;
-    font-size: 1.1rem;
-    
-    border: .1rem solid transparent;
-    outline: none;
-}
-
-input[type="tel"] {
-    border-radius: 0 .5rem .5rem 0;
-}
-
-.select-box input:focus {
-    border: .1rem solid var(--black);
-}
-
-.selected-option {
-    background-color: #eee;
-    border-radius: .5rem;
-    overflow: hidden;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.selected-option div{
-    position: relative;
-
-    width: 6rem;
-    padding: 0 2.8rem 0 .5rem;
-    text-align: center;
-    cursor: pointer;
-}
-
-.selected-option div::after{
-    position: absolute;
-    content: "";
-    right: .8rem;
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
-    
-    width: .8rem;
-    height: .8rem;
-    border-right: .12rem solid var(--black);
-    border-bottom: .12rem solid var(--black);
-
-    transition: .2s;
-}
-
-.selected-option div.active::after{
-    transform: translateY(-50%) rotate(225deg);
-}
-
-.select-box .options {
-    position: absolute;
-    top: 4rem;
-    
-    width: 100%;
-    background-color: #fff;
-    border-radius: .5rem;
-
-    display: none;
-}
-
-.select-box .options.active {
-    display: block;
-}
-
-.select-box .options::before {
-    position: absolute;
-    content: "";
-    left: 1rem;
-    top: -1.2rem;
-
-    width: 0;
-    height: 0;
-    border: .6rem solid transparent;
-    border-bottom-color: var(--black);
-}
-
-input.search-box {
-    background-color: var(--black);
-    color: #fff;
-    border-radius: .5rem .5rem 0 0;
-    padding: 1.4rem 1rem;
-}
-
-.select-box ol {
-    list-style: none;
-    max-height: 23rem;
-    overflow: overlay;
-}
-
-.select-box ol::-webkit-scrollbar {
-    width: 0.6rem;
-}
-
-.select-box ol::-webkit-scrollbar-thumb {
-    width: 0.4rem;
-    height: 3rem;
-    background-color: #ccc;
-    border-radius: .4rem;
-}
-
-.select-box ol li {
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.select-box ol li.hide {
-    display: none;
-}
-
-.select-box ol li:not(:last-child) {
-    border-bottom: .1rem solid #eee;
-}
-
-.select-box ol li:hover {
-    background-color: lightcyan;
-}
-
-.select-box ol li .country-name {
-    margin-left: .4rem;
-} */
-/* .phone-number-input{
-    display: flex;
-    width: 100%;
-}
-.country-icon{
-    width: 20%;
-}
-.country-icon option{
-    display: none;
-} */
-
-.phone-number-input {
+  .phone-number-input {
     display: flex;
     align-items: center;
+    position: relative;
+    width: 100%;
+    background-color: var(--wite-smoke);
+    border: solid 1px #ccc;
+    border-radius: 4px;
   }
   
   .country-icon {
     display: flex;
     align-items: center;
-    margin-right: 0.5rem;
+    padding: 9px 8px;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    background-color: var(--light-grey);
+    cursor: pointer;
   }
   
-  .iconify {
-    font-size: 1.5rem;
+  .flag-icon {
+    margin-right: 5px;
+    width: 100%;
+  }
+  
+  .country-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .country-dropdown.show {
+    display: block;
+    max-height: 300px;
+  }
+  
+  .dropdown-content {
+    padding: 8px;
+  }
+  
+  .search-box {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .country-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .country-list li {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .country-list li:hover {
+    background-color: #f5f5f5;
+  }
+  
+  #phone {
+    flex-grow: 1;
+    padding: 12px 12px;
+    border: none !important;
+    border-radius: none !important;
+    outline: none;
+  }
+  #special-accommodations{
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    border: solid 1px #ccc;
+    border-radius: 4px;
+  }
+  .success{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    align-items: center
+  }
+  .lottie{
+    width: 100%;
+  }
+  .lottie svg {
+    width: 50% !important;
+    height: 50% !important;
+  }
+  .reserve-banner{
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+    height: 100%;
+  }
+  .reservation{
+    width: 100%;
+    padding-bottom: 0 !important;
+    height: 400px;
+    background-image: linear-gradient(to top, #222, transparent);
+  }
+  .reserve-banner-content{
+    height: 100% !important;
+  }
+  .reserve-image {
+    background-image: none !important;
   }

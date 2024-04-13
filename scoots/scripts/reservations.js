@@ -71,90 +71,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// // Select relevant elements
-// const selectBox = document.querySelector('.options ol');
-// const searchBox = document.querySelector('.search-box');
-// const inputBox = document.querySelector('input[type="tel"]');
-// const selectedOption = document.querySelector('.selected-option div');
-
-// let options = null;
-
-// // Fetch the JSON data
-// fetch(phonelibURL)
-//     .then(response => response.json())
-//     .then(data => {
-//         options = data; // Assign the fetched data to the options variable
-
-//         // Populate the country list dynamically
-//         data.forEach(country => {
-//             const option = `
-//                 <li class="option">
-//                     <div>
-//                         <span class="iconify" data-icon="flag:${country.code.toLowerCase()}-4x3"></span>
-//                         <span class="country-name">${country.name}</span>
-//                     </div>
-//                     <strong>+${country.phone}</strong>
-//                 </li> `;
-//             selectBox.insertAdjacentHTML('beforeend', option);
-//             console.log('Option added')
-//         });
-
-//         // Add event listeners
-//         // Add event listeners after the country list is populated
-//         document.querySelectorAll('.option').forEach(option => {
-//         option.addEventListener('click', selectOption);
-//         });
-
-//     })
-//     .catch(error => console.error('Error fetching data:', error));
-
-// function selectOption() {
-//     const icon = this.querySelector('.iconify').cloneNode(true);
-//     const phoneCode = this.querySelector('strong').cloneNode(true);
-
-//     selectedOption.innerHTML = '';
-//     selectedOption.append(icon, phoneCode);
-
-//     inputBox.value = phoneCode.innerText;
-
-//     selectBox.classList.remove('active');
-//     selectedOption.classList.remove('active');
-
-//     searchBox.value = '';
-//     selectBox.querySelectorAll('.hide').forEach(el => el.classList.remove('hide'));
-// }
-
-// function searchCountry() {
-//     const searchQuery = searchBox.value.toLowerCase();
-//     options.forEach(option => {
-//         const isMatched = option.name.toLowerCase().includes(searchQuery);
-//         option.classList.toggle('hide', !isMatched);
-//     });
-// }
-
-// selectedOption.addEventListener('click', () => {
-//     console.log('Selected option clicked'); // Add this line
-//     selectBox.classList.toggle('active');
-//     selectedOption.classList.toggle('active');
-// });
-
 // // Fetch the JSON data
 // fetch(phonelibURL)
 //   .then(response => response.json())
 //   .then(data => {
 //     const countryCodeSelect = document.getElementById('country-code');
+//     const defaultOption = data[0]; // Get the first country as the default
+
+//     // Update the default flag icon and country code
+//     const flagIcon = document.querySelector('.flag-icon');
+//     const countryCode = document.querySelector('.country-code');
+//     flagIcon.appendChild(createIcon(`flag:${defaultOption.code.toLowerCase()}-4x3`));
+//     countryCode.textContent = `+${defaultOption.phone}`;
 
 //     // Add options to the select element
 //     data.forEach(country => {
 //       const option = document.createElement('option');
 //       option.value = `+${country.phone}`;
-//       option.text = `${country.name} (+${country.phone})`;
-//       option.dataset.flag = `fi-${country.code.toLowerCase()}`;
+//       option.text = country.name; // Only display the country name in the options
+//       option.dataset.flag = `flag:${country.code.toLowerCase()}-4x3`;
 //       countryCodeSelect.add(option);
 //     });
 
-//     // Make the select searchable
-//     new FsLightbox(countryCodeSelect);
+//     // Update the flag icon and country code when an option is selected
+//     countryCodeSelect.addEventListener('change', updateFlagAndCode);
 //   })
 //   .catch(error => console.error('Error fetching data:', error));
 
@@ -166,53 +106,124 @@ document.addEventListener('DOMContentLoaded', function () {
 //   return iconElement;
 // }
 
-// // Add event listener to update the flag icon
-// document.getElementById('country-code').addEventListener('change', () => {
-//   const selectedOption = document.getElementById('country-code').selectedOptions[0];
-//   const flagIcon = document.querySelector('.country-icon');
+// // Function to update the flag icon and country code
+// function updateFlagAndCode() {
+//   const selectedOption = this.selectedOptions[0];
+//   const flagIcon = document.querySelector('.flag-icon');
+//   const countryCode = document.querySelector('.country-code');
+
 //   flagIcon.innerHTML = '';
-//   flagIcon.appendChild(createIcon(selectedOption.dataset.flag));
-// });
+//   countryCode.textContent = '';
+
+//   if (selectedOption.value) {
+//     flagIcon.appendChild(createIcon(selectedOption.dataset.flag));
+//     countryCode.textContent = selectedOption.value;
+//   }
+// }
 
 // Fetch the JSON data
 fetch(phonelibURL)
   .then(response => response.json())
   .then(data => {
-    const countryCodeSelect = document.getElementById('country-code');
+    const countryIcon = document.querySelector('.country-icon');
+    const countryDropdown = document.querySelector('.country-dropdown');
+    const dropdownContent = document.querySelector('.dropdown-content');
+    const countryList = document.querySelector('.country-list');
+    const searchBox = document.querySelector('.search-box');
+    const defaultOption = data[0]; // Get the first country as the default
 
-    // Add options to the select element
-    data.forEach(country => {
-      const option = document.createElement('option');
-      option.value = `+${country.phone}`;
-      option.text = `${country.name} (+${country.phone})`;
-      option.dataset.flag = `flag:${country.code.toLowerCase()}-4x3`;
-      countryCodeSelect.add(option);
-    });
+    // Update the default flag icon and country code
+    const flagIcon = document.querySelector('.flag-icon');
+    const countryCode = document.querySelector('.country-code');
+    flagIcon.appendChild(createIcon(`flag:${defaultOption.code.toLowerCase()}-4x3`));
+    countryCode.textContent = `+${defaultOption.phone}`;
 
-    // Update the flag icon and country code when an option is selected
-    countryCodeSelect.addEventListener('change', updateFlagAndCode);
+    // Add event listener to show/hide country dropdown
+    countryIcon.addEventListener('click', toggleCountryDropdown);
+    document.addEventListener('click', handleOutsideClick);
+
+    // Function to toggle country dropdown visibility
+    function toggleCountryDropdown() {
+      countryDropdown.classList.toggle('show');
+      if (countryDropdown.classList.contains('show')) {
+        searchBox.value = ''; // Clear search box
+        populateCountryList(data);
+      } else {
+        dropdownContent.innerHTML = ''; // Clear dropdown content
+      }
+    }
+
+    // Function to populate country list
+    function populateCountryList(countries) {
+      countryList.innerHTML = '';
+      countries.forEach(country => {
+        const li = document.createElement('li');
+        li.textContent = `${country.name} (+${country.phone})`;
+        li.dataset.flag = `flag:${country.code.toLowerCase()}-4x3`;
+        li.addEventListener('click', selectCountry);
+        countryList.appendChild(li);
+      });
+      dropdownContent.appendChild(searchBox);
+      dropdownContent.appendChild(countryList);
+    }
+
+    // Function to filter countries based on search input
+    function filterCountries() {
+      const searchTerm = searchBox.value.toLowerCase();
+      const filteredCountries = data.filter(country =>
+        country.name.toLowerCase().includes(searchTerm)
+      );
+      populateCountryList(filteredCountries);
+    }
+
+    // Function to select a country
+    function selectCountry() {
+      const selectedCountry = this.textContent.split(' ');
+      const countryCode = selectedCountry[selectedCountry.length - 1].slice(1, -1);
+      const countryName = selectedCountry.slice(0, -1).join(' ');
+      const flagIcon = document.querySelector('.flag-icon');
+      const countryCodeSpan = document.querySelector('.country-code');
+
+      flagIcon.innerHTML = '';
+      flagIcon.appendChild(createIcon(this.dataset.flag));
+      countryCodeSpan.textContent = `${countryCode}`;
+      countryDropdown.classList.remove('show');
+    }
+
+    // Helper function to create an icon element
+    function createIcon(iconName) {
+      const iconElement = document.createElement('span');
+      iconElement.classList.add('iconify');
+      iconElement.dataset.icon = iconName;
+      return iconElement;
+    }
+
+    // Function to handle outside click
+    function handleOutsideClick(event) {
+      if (!countryDropdown.contains(event.target) && !countryIcon.contains(event.target)) {
+        countryDropdown.classList.remove('show');
+      }
+    }
+
+    // Add event listener for search input
+    searchBox.addEventListener('input', filterCountries);
+    searchBox.addEventListener('keydown', handleSearchBoxKeydown);
+
+    // Function to handle search box keydown event
+    function handleSearchBoxKeydown(event) {
+      if (event.key === 'Backspace' || event.key === 'Delete') {
+        event.stopPropagation();
+      }
+    }
   })
   .catch(error => console.error('Error fetching data:', error));
 
-// Helper function to create an icon element
-function createIcon(iconName) {
-  const iconElement = document.createElement('span');
-  iconElement.classList.add('iconify');
-  iconElement.dataset.icon = iconName;
-  return iconElement;
-}
-
-// Function to update the flag icon and country code
-function updateFlagAndCode() {
-  const selectedOption = this.selectedOptions[0];
-  const flagIcon = document.querySelector('.flag-icon');
-  const countryCode = document.querySelector('.country-code');
-
-  flagIcon.innerHTML = '';
-  countryCode.textContent = '';
-
-  if (selectedOption.value) {
-    flagIcon.appendChild(createIcon(selectedOption.dataset.flag));
-    countryCode.textContent = selectedOption.value;
-  }
-}
+  // Load the Lottie animation
+ var animation = bodymovin.loadAnimation({
+    container: document.getElementById('lottieAnimation'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '../chamber/images/success.json' 
+  });
+  

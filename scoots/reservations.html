@@ -31,7 +31,7 @@
         <nav>
             <div class="nav-bar">
                 <section class="logo">
-                    <a href="index.html"> <img src="images/scoots.webp" alt="scots logo"></a>
+                    <a href="index.html"> <img src="images/scoots-white.webp" alt="scots logo"></a>
                  </section>  
                  <section class="nav-menu">
                     <ul>
@@ -109,7 +109,7 @@
                             <div class="form-group">
                                 <label for="period">Period:</label>
                                 <select id="period" name="period" required>
-                                    <option>Select Prefered Period</option>
+                                    <option value="placeholder"> Select Prefered Period</option>
                                     <option value="half-day">Half Day</option>
                                     <option value="full-day">Full Day</option>
                                 </select>
@@ -122,34 +122,22 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="number">Number:</label>
+                                <label for="number">Number of Visitors:</label>
                                 <input type="number" id="number" name="number" required>
                             </div>
-                            <!-- <div class="form-group">
-                                <label for="phone">Phone Number:</label>
-                                <div class="select-box">
-                                    <div class="selected-option">
-                                        <div>
-                                            <strong id="selected-country-code"></strong>
-                                        </div>
-                                        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
-                                    </div>
-                                    <div class="options">
-                                        <input type="text" class="search-box" placeholder="Search Country Name">
-                                        <ol id="country-list">
-                            
-                                        </ol>
-                                    </div>
-                                </div>
-                            </div> -->
                             <div class="form-group">
                                 <label for="phone">Phone Number:</label>
                                 <div class="phone-number-input">
-                                  <div class="country-icon">
+                                  <div class="country-icon" tabindex="0">
                                     <span class="flag-icon"></span>
                                     <span class="country-code"></span>
                                   </div>
-                                  <select id="country-code" name="country-code" aria-label="Select Country Code"></select>
+                                  <div class="country-dropdown">
+                                    <div class="dropdown-content">
+                                      <input type="text" class="search-box" placeholder="Search Country">
+                                      <ul class="country-list"></ul>
+                                    </div>
+                                  </div>
                                   <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
                                 </div>
                               </div>
@@ -183,22 +171,12 @@
 
             </section>
         </section>
-        <section class="reserve-hero">
-            <div class="rentals-hero-wrapper">
-                <div  class="rentals-hero-content">
-                    <div class="rentals-hero-img">
+        <section class="reserve-hero reservation">
+            <div class="rentals-hero-wrapper reserve-banner">
+                <div  class="rentals-hero-content reserve-banner-content">
+                    <div class="rentals-hero-img reserve-image">
                         <img src="images/scoots-og.jpg" alt="Image 1">
                     </div>
-                    <!-- <div class="hero-feature">
-                        <p class="feature-item"> Featured Item</p>
-                        <div class="feature-text">
-                            <h3> Honda</h3>
-                            <p class="feautured item price"> 13 USD</p>
-                        </div>
-                    </div>
-                    <button class="left-button">&#10094;</button>
-                    <button class="right-button">&#10095;</button>
-                </div>  -->
             </div>
         </section>
     </main>
