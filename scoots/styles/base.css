@@ -706,16 +706,16 @@ input, select {
 
 .form-group button {
     padding: 15px 30px;
-    background-color: #007bff;
+    background-color: var(--indian-red);
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     /* width: 100%; */
 }
 
 .form-group button:hover {
-    background-color: #0056b3;
+    background-color: var(--black);
 }
 .reservation-form,
 .rental-agreement{
@@ -763,14 +763,12 @@ input, select {
   
   /* .select-box {
     position: relative;
-
-    width: 26rem;
-    margin: 7rem auto;
+    width: 100%;
 }
 
 .select-box input {
     width: 100%;
-    padding: 1rem .6rem;
+    padding: 10px 5px;
     font-size: 1.1rem;
     
     border: .1rem solid transparent;
@@ -896,3 +894,28 @@ input.search-box {
 .select-box ol li .country-name {
     margin-left: .4rem;
 } */
+/* .phone-number-input{
+    display: flex;
+    width: 100%;
+}
+.country-icon{
+    width: 20%;
+}
+.country-icon option{
+    display: none;
+} */
+
+.phone-number-input {
+    display: flex;
+    align-items: center;
+  }
+  
+  .country-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+  }
+  
+  .iconify {
+    font-size: 1.5rem;
+  }
