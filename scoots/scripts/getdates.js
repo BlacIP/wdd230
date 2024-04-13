@@ -2,7 +2,8 @@ const apiKey = '335693caab24c80dc3e31365307b3f55';
 const city = 'cozumel';
 
 const baseURL = "https://blacip.github.io/wdd230/";
-const linksURL = "https://blacip.github.io/wdd230/scoots/data/scoots.json";
+const scootsURL = "https://blacip.github.io/wdd230/scoots/data/scoots.json";
+const phonelibURL = "https://blacip.github.io/wdd230/scoots/data/phonelib.json";
 const cacheKey = "cachedData";
 
 
@@ -21,7 +22,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
 
 
 function fetchDataFromServer() {
-    return fetch(linksURL)
+    return fetch(scootsURL)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');

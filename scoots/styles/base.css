@@ -761,7 +761,7 @@ input, select {
     padding-bottom: 65px;
   }
   
-  .select-box {
+  /* .select-box {
     position: relative;
 
     width: 26rem;
@@ -782,7 +782,7 @@ input[type="tel"] {
 }
 
 .select-box input:focus {
-    border: .1rem solid var(--primary);
+    border: .1rem solid var(--black);
 }
 
 .selected-option {
@@ -813,8 +813,8 @@ input[type="tel"] {
     
     width: .8rem;
     height: .8rem;
-    border-right: .12rem solid var(--primary);
-    border-bottom: .12rem solid var(--primary);
+    border-right: .12rem solid var(--black);
+    border-bottom: .12rem solid var(--black);
 
     transition: .2s;
 }
@@ -847,11 +847,11 @@ input[type="tel"] {
     width: 0;
     height: 0;
     border: .6rem solid transparent;
-    border-bottom-color: var(--primary);
+    border-bottom-color: var(--black);
 }
 
 input.search-box {
-    background-color: var(--primary);
+    background-color: var(--black);
     color: #fff;
     border-radius: .5rem .5rem 0 0;
     padding: 1.4rem 1rem;
@@ -895,4 +895,4 @@ input.search-box {
 
 .select-box ol li .country-name {
     margin-left: .4rem;
-}
+} */

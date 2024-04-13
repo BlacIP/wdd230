@@ -3,7 +3,7 @@
 
 // Function to fetch data from the JSON file
 function fetchDataFromServer() {
-    return fetch(linksURL)
+    return fetch(scootsURL)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -68,8 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-const baseURL = "https://blacip.github.io/wdd230/";
-const linksURL = "https://blacip.github.io/wdd230/scoots/data/phonelib.json";
+
 
 
 // Select relevant elements
@@ -81,7 +80,7 @@ const selectedOption = document.querySelector('.selected-option div');
 let options = null;
 
 // Fetch the JSON data
-fetch(countriesURL)
+fetch(phonelibURL)
     .then(response => response.json())
     .then(data => {
         options = data; // Assign the fetched data to the options variable
@@ -100,8 +99,11 @@ fetch(countriesURL)
         });
 
         // Add event listeners
-        options.forEach(option => option.addEventListener('click', selectOption));
-        searchBox.addEventListener('input', searchCountry);
+        // Add event listeners after the country list is populated
+        document.querySelectorAll('.option').forEach(option => {
+         option.addEventListener('click', selectOption);
+        });
+
     })
     .catch(error => console.error('Error fetching data:', error));
 

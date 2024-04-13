@@ -43,7 +43,7 @@ locationImages.forEach(locationImage => {
   }
 });
     
-    fetch(linksURL)
+    fetch(scootsURL)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

@@ -36,7 +36,7 @@ document.querySelectorAll('.sidebar-btn').forEach(btn => {
 
 
 // Fetch the JSON data
-fetch(linksURL)
+fetch(scootsURL)
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
@@ -88,7 +88,7 @@ fetch(linksURL)
 
 
   function fetchDataFromServer() {
-    return fetch(linksURL)
+    return fetch(scootsURL)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -170,7 +170,7 @@ function fetchData() {
 
 
 
-fetch(linksURL)
+fetch(scootsURL)
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
