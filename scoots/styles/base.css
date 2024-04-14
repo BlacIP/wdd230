@@ -883,3 +883,62 @@ input, select {
   .reserve-image {
     background-image: none !important;
   }
+  .reserve-contact{
+    width: 1200px;
+    margin: auto;
+    position: absolute;
+    /* top: 210%; */
+    /* transform: translate(10%, 10%); */
+    color: white;
+    height: 300px;
+    padding: 0 15px;
+  }
+  .reserve-contac-wrapper{
+    min-height: 370px;
+    display: flex;
+    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 10px;
+  }
+  .reserve-contac-wrapper h1{
+    /* width: 40%; */
+    margin: 20px 0;
+    width: 35%;
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 1.2;
+    /* margin: 0 20px 0 10px; */
+
+  }
+  .reserve-contac-wrapper p{
+    margin-bottom: 25px;
+    width: 35%;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .reserve-contac-wrapper a{
+    background-color: var(--indian-red);
+    padding: 10px 20px;
+    color: var(--wite-smoke);
+    border-radius: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    /* cursor: pointer; */
+    z-index: 1
+  }
+  .reserve-contac-wrapper a:hover {
+    background-color: var(--black); 
+  }
+ 
+  .reserve-contact-head{
+    width: 1200px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+
+ 
+  
