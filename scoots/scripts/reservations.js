@@ -1,6 +1,3 @@
-// const baseURL = "https://blacip.github.io/wdd230/";
-// const linksURL = "https://blacip.github.io/wdd230/scoots/data/scoots.json";
-
 // Function to fetch data from the JSON file
 function fetchDataFromServer() {
     return fetch(scootsURL)
@@ -67,59 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
-
-
-
-// // Fetch the JSON data
-// fetch(phonelibURL)
-//   .then(response => response.json())
-//   .then(data => {
-//     const countryCodeSelect = document.getElementById('country-code');
-//     const defaultOption = data[0]; // Get the first country as the default
-
-//     // Update the default flag icon and country code
-//     const flagIcon = document.querySelector('.flag-icon');
-//     const countryCode = document.querySelector('.country-code');
-//     flagIcon.appendChild(createIcon(`flag:${defaultOption.code.toLowerCase()}-4x3`));
-//     countryCode.textContent = `+${defaultOption.phone}`;
-
-//     // Add options to the select element
-//     data.forEach(country => {
-//       const option = document.createElement('option');
-//       option.value = `+${country.phone}`;
-//       option.text = country.name; // Only display the country name in the options
-//       option.dataset.flag = `flag:${country.code.toLowerCase()}-4x3`;
-//       countryCodeSelect.add(option);
-//     });
-
-//     // Update the flag icon and country code when an option is selected
-//     countryCodeSelect.addEventListener('change', updateFlagAndCode);
-//   })
-//   .catch(error => console.error('Error fetching data:', error));
-
-// // Helper function to create an icon element
-// function createIcon(iconName) {
-//   const iconElement = document.createElement('span');
-//   iconElement.classList.add('iconify');
-//   iconElement.dataset.icon = iconName;
-//   return iconElement;
-// }
-
-// // Function to update the flag icon and country code
-// function updateFlagAndCode() {
-//   const selectedOption = this.selectedOptions[0];
-//   const flagIcon = document.querySelector('.flag-icon');
-//   const countryCode = document.querySelector('.country-code');
-
-//   flagIcon.innerHTML = '';
-//   countryCode.textContent = '';
-
-//   if (selectedOption.value) {
-//     flagIcon.appendChild(createIcon(selectedOption.dataset.flag));
-//     countryCode.textContent = selectedOption.value;
-//   }
-// }
 
 // Fetch the JSON data
 fetch(phonelibURL)
