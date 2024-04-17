@@ -143,7 +143,7 @@
         font-size: 15px;
     }
     .footer-logo {
-        width: 20%;
+        width: 10%;
     }
     .footer{
         font-size: 14px;
@@ -282,6 +282,30 @@
     .custom-option:hover {
         background-color: var(--white-smoke); /* Lighter gray on hover */
     }
-    
+    .product-sidebar{
+        padding: 0;
+    }
+    .pricing-table table, .pricing-table th, .pricing-table td {
+        font-size: 12px; /* Reduce font size */
+        padding: 8px; /* Reduce padding to save space */
+    }
+
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

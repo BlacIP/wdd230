@@ -614,37 +614,39 @@ footer{
 }
 
 .pricing-table {
-    /* margin: 20px auto; */
-    width: 100%;
-  }
-  
-  table {
+    margin: 20px auto;
+    overflow-x: auto; /* Allows table to scroll horizontally on small screens */
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
-  }
-  
-  thead th, tbody td {
+    table-layout: fixed; /* Helps keep column widths consistent */
+}
+
+thead th, tbody td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
-  }
-  
-  thead th {
+    word-wrap: break-word; /* Ensures text doesn't overflow its container */
+}
+
+thead th {
     background-color: #f0f0f0;
-  }
-  
-  tbody td {
+}
+
+tbody td {
     background-color: #fff;
-  }
-  
-  tbody tr:nth-child(even) td {
+}
+
+tbody tr:nth-child(even) td {
     background-color: #f9f9f9;
-  }
-  
-  tbody tr td:first-child{
+}
+
+tbody tr td:first-child {
     text-align: left;
-    padding-left: 30px;
-  }
+    padding-left: 15px; /* Adjusted for mobile */
+}
 
   .location-image {
     position: relative;
