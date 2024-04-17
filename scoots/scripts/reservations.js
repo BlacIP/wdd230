@@ -171,3 +171,15 @@ fetch(phonelibURL)
     path: '../chamber/images/success.json' 
   });
   
+
+//   document.querySelector('a[href="#reservationForm"]').addEventListener('click', function(e) {
+//     e.preventDefault(); // Prevent default anchor click behavior
+
+//     var form = document.getElementById('reservationForm');
+//     var topOfForm = form.getBoundingClientRect().top + window.scrollY - 10; // Adjust '50' as needed
+
+//     window.scrollTo({
+//         top: topOfForm,
+//         behavior: 'smooth'
+//     });
+// });

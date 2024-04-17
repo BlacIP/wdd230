@@ -336,6 +336,9 @@
         border: none;
         padding: 15px;
     }
+    .success{
+        width: 100%;
+    }
 }
 
 

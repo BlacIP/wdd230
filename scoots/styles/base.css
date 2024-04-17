@@ -136,6 +136,10 @@ nav{
 .two{
     margin-top: 60px;
 }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
 
 .cta-image, .hero-slide {
     position: relative;
