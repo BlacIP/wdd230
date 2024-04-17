@@ -25,6 +25,7 @@
                 <button class="close-btn" onclick="closeBanner()">x</button>
             </div>
         </section>
+        <button title="menu" id= "menu"></button>
         <nav>
             <div class="nav-bar">
                 <section class="logo">
@@ -73,6 +74,21 @@
                             <button class="sidebar-btn active" data-content="content1">Content 1</button>
                             <button class="sidebar-btn" data-content="content2">Content 2</button>
                             <button class="sidebar-btn" data-content="content3">Content 3</button>
+                        </div>
+                    </div>
+                    <div class="sidebar-mobile">
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select">
+                                <div class="custom-select__trigger"><span>Content 1</span>
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="custom-options" style="display: none;">
+                                    <!-- Options will be added dynamically here -->
+                                </div>
+                            </div>
+                            <select id="dropdownMenu" class="dropdown-menu" title="Choose Content" hidden>
+                                <!-- Native options will be added dynamically here as fallback -->
+                            </select>
                         </div>
                     </div>
                     <div class="content-wrapper">

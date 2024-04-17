@@ -4,37 +4,40 @@
     }
     .banner{
         width: 100%;
+        padding: 0%;
+    }
+    .banner p{
+        font-size: 16px;
     }
     .nav-bar{
         width: 100%;
         display: flex;
     }
     nav{
-        padding: 30px 0 0 0;
-        width: 100%;
-        color: var(--text-color);
+        padding: 20px 0;
+        /* width: 100%; */
+        color: var(--white-smoke);
     }
     .nav-menu{
-        /* display: none; */
+        display: none;
         grid-template-columns: 1fr;
         gap: 10px;
         padding: 20px;
         position: fixed;
-        /* background-color: var(--background-color); */
+        background-color: var(--indian-red);
         top: 80px; 
         left: 0;
         width: 100%;
         box-sizing: border-box;
     }
     .nav-menu ul{
-        display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 5px;
     }
     .logo img{
-        width: 80px;
-        padding-left: 10px ;
+        width: 10%;
+        padding-left: 20px ;
     }
     #menu {
         display: block;
@@ -45,8 +48,8 @@
         width: 40px; 
         height: 40px; 
         position: fixed;
-        top: 20px; 
-        right: 10px; 
+        /* top: 5%;  */
+        right: 5%; 
         cursor: pointer;
         z-index: 1;
         font-size: 30px;
@@ -58,8 +61,227 @@
         content: 'x';
     }
 
-    #menu.open + .nav-menu {
+    #menu.open + nav > .nav-bar > .nav-menu {
         display: grid;
     }
+    .nav-menu.open {
+        display: flex;
+        justify-items: start;
+        flex-direction: column;
+        align-content: flex-start;
+        align-items: flex-start;
 
+    }
+
+    .cta-text, .hero-text{
+        width: 100%;
+        padding: 0%;
+    }
+    .hero-content, .cta-content{
+        margin: 40px;
+        min-height: 100%;
+    }
+    .cta-content h1, .hero-content h1{
+        width: 100%;
+        font-size: 40px;
+    }
+    .cta-content p, .hero-content p{
+        width: 100%;
+    }
+    .location-wrapper, .product-wrapper{
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+    }
+    .location-image{
+        width: 100%;
+        /* border: solid 2px var(--light-grey);
+        border-radius: 5px; */
+        /* padding: 10px; */
+    }
+    .location{
+        width: 100%;
+        /* padding: 0 10px; */
+    }
+    .weather-wrapper{
+        flex-direction: column;
+    }
+    .one, .four, .three {
+        padding: 65px 20px;
+    }
+    .two, .hero-container{
+        height: 450px;
+    }
+    .two{
+        margin: 0;
+    }
+    .weather-wrapper, .product{
+        padding: 0;
+    }
+    .product-image{
+        width: 100%;
+    }
+    .home-gallery2 ul{
+        margin-bottom: 20px;
+    }
+    #current-weather {
+        width: 100%;
+        padding: 0;
+    }
+    .weather-card{
+        width: 100%;
+        padding: 0;
+    }
+    .weather-card h2 {
+        padding: 10px 10px 0 10px;
+        font-size: 23px;
+    }
+    .current-info, .current-card{
+        padding: 0 10px 10px 10px;
+    }
+    .city-country {
+        font-size: 15px;
+    }
+    .footer-logo {
+        width: 20%;
+    }
+    .footer{
+        font-size: 14px;
+    }
+    .footer-bottom{
+        flex-direction: column;
+    }
+    .text-container h1{
+        font-size: 25px;
+    }
+    .product-banner{
+        padding: 15px 0;
+    }
+    .rentals-hero-img{
+        height: 100%;
+    }
+   
+
+    .sidebar-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%; /* Take the full width of the sidebar-wrapper */
+    }
+
+    .content-wrapper {
+        width: 100%; /* Full width to match the sidebar */
+    }
+
+    .sidebar-btn {
+        display: block; /* Makes buttons stack vertically */
+    }
+
+    /* Optionally hide content initially and show on button click (like a dropdown) */
+    .content {
+        display: none;
+    }
+
+    .content.active {
+        display: block; /* Only show the active content */
+    }
+    .sidebar{
+        display: none;
+    }
+    .sidebar-mobile{
+        display: block;
+        margin-bottom: 10px;
+    }
+    .dropdown-menu {
+        width: 100%; /* Full width */
+        padding: 10px 25px; /* Comfortable padding */
+        border: 1px solid var(--black); /* Border similar to buttons */
+        border-radius: 5px; /* Rounded corners */
+        background-color: var(--white-smoke); /* Background color */
+        color: var(--black); /* Text color */
+        appearance: none; /* Disable default system appearance */
+    }
+
+    .custom-select-wrapper {
+        position: relative;
+        user-select: none;
+        width: 100%;
+    }
+    
+    .custom-select {
+        position: relative;
+        display: block;
+        font-family: sans-serif;
+        color: var(--white-smoke);
+    }
+    
+    .custom-select__trigger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: var(--black); 
+        border: 1px solid var(--black);
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    
+    .arrow {
+        position: relative;
+        height: 10px;
+        width: 10px;
+        margin-left: 10px;
+    }
+    
+    .arrow::before, .arrow::after {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        width: 0.15em;
+        height: 0.15em;
+        border-right: 2px solid var(--black);
+        border-top: 2px solid var(--black);
+        transform: rotate(45deg);
+    }
+    
+    .arrow::before {
+        transform: rotate(-45deg);
+    }
+    
+    .custom-options {
+        position: absolute;
+        display: none;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: none;
+        background: white;
+        z-index: 5;
+        border-radius: 5px;
+        border-top: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Horizontal offset, vertical offset, blur radius, color */
+    }
+    
+    .custom-option {
+        display: block;
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: var(--white-smoke); /* Default background for options */
+        color: var(--black);
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .custom-option:last-child{
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    
+    .custom-option:hover {
+        background-color: var(--white-smoke); /* Lighter gray on hover */
+    }
+    
+    
 }

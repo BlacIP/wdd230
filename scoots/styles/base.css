@@ -111,6 +111,9 @@ nav{
     background-color: var(--black);
     color: var(--wite-smoke);
 }
+#menu {
+    display: none;
+}
 
 .nav-menu .active{
     background-color: var(--black);
@@ -503,7 +506,7 @@ footer{
 }
 
 .rentals-hero-img {
-    background-image: linear-gradient(to top, rgba(199, 7, 7, 0.7), transparent);
+    background-image: linear-gradient(to top, rgb(0, 0, 0), transparent);
 }
 
 .rentals-hero-content img {
@@ -525,6 +528,7 @@ footer{
     position: absolute;
     left: 2%;
     bottom: 6%;
+    color: var(--wite-smoke);
 }
 .feature-text h3{
     font-size: 24px;
@@ -579,6 +583,9 @@ footer{
     background-color: var(--black);
     color: var(--wite-smoke);
     
+}
+.sidebar-mobile{
+    display: none;
 }
 
 .content-wrapper {
