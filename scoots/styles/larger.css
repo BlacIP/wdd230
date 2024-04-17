@@ -289,8 +289,53 @@
         font-size: 12px; /* Reduce font size */
         padding: 8px; /* Reduce padding to save space */
     }
-
+    .reserve-info{
+        width: 100%;
+    }
+    .reserve-info-wrapper{
+        flex-direction: column;
+        gap: 30px;
+       box-sizing: content-box;
+    }
+    .reservation{
+        height: 300px;
+    }
+    .reserve-contact{
+        padding: 0%;
+        width: 100%;
+    }
+    .reserve-contac-wrapper{
+        width: 80%;
+        position: static;
+        margin: 20px auto 20px auto;
+        min-height: 50%;
     
+    } 
+    .reserve-contac-wrapper h1{
+        width: 100%;
+        font-size: 40px;
+    }
+    .reserve-contac-wrapper p{
+        width: 100%;
+        font-size: 14px;
+    }
+    .rental-agreement{
+        width: 100%;
+        padding: 0%;
+        margin: 0%;
+    }
+    .reservation-form{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    form{
+        padding: 20px
+    }
+    .inner-border{
+        border: none;
+        padding: 15px;
+    }
 }
 
 
