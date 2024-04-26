@@ -7,18 +7,40 @@ const phonelibURL = "https://blacip.github.io/wdd230/scoots/data/phonelib.json";
 const cacheKey = "cachedData";
 
 
-function closeBanner() {
-    document.querySelector('.banner').style.display = 'none';
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const closeBanner = () => {
+        document.querySelector('.banner').style.display = 'none';
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href) {
+                link.setAttribute('href', href.includes('?') ? href + '&bannerClosed=true' : href + '?bannerClosed=true');
+            }
+        });
+    };
 
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
-  .then(response => response.json())
-  .then(data => {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const bannerClosed = urlParams.get('bannerClosed');
 
-    const maxTemp = data.main.temp_max;
-    const bannerMessage = `Today's high temperature: ${maxTemp}°C`;
-    document.querySelector('.banner p').textContent = bannerMessage;
+    if (bannerClosed) {
+        closeBanner();
+    } else {
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+            .then(response => response.json())
+            .then(data => {
+                if (data && data.main && data.main.temp_max !== undefined) {
+                    const maxTemp = data.main.temp_max;
+                    const bannerMessage = `Today's high temperature: ${maxTemp}°C`;
+                    document.querySelector('.banner p').textContent = bannerMessage;
+                    document.querySelector('.close-btn').addEventListener('click', closeBanner);
+                }
+            })
+            .catch(error => console.error('Failed to fetch weather data:', error));
+    }
 });
+
+
 
 
 function fetchDataFromServer() {

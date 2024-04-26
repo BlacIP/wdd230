@@ -960,7 +960,7 @@ input, select {
 }
 
 .hero-contact-image {
-    width: 70%;
+    width: 100%;
     height: 550px;
     position: relative; 
     overflow: hidden;
@@ -973,7 +973,7 @@ input, select {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right, #222, transparent);
+    background-image: linear-gradient(to top, #000000, transparent);
     z-index: 2; 
 }
 
@@ -993,8 +993,15 @@ input, select {
     margin: auto;
     padding: 0 15px;
     z-index: 5;
+    top: 50%;
     left: 0%;
     right: 0%;
+}
+.contact-hero-container h1{
+    font-weight: 800;
+    text-align: center;
+    font-size: 80px;
+    /* margin: auto; */
 }
 
  img{
@@ -1027,3 +1034,84 @@ input, select {
  .contact-info span{
     font-weight: 700;
  }
+ .contact-right{
+    padding-left: 20px;
+    width: 70%;
+ }
+ .contact-right h2{
+    margin: 20px 0 10px 0;
+ }
+ .contact-right p{
+    margin-bottom: 10px;
+ }
+ .form-details label span{
+    margin-bottom: 5px;
+    font-weight: normal;
+ }
+ .form-details div{
+    display: flex;
+    flex-direction: column;
+ }
+ .form-details textarea{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+ }
+ /* Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 10; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 30% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%;
+    border-radius: 10px;
+    position: fixed;
+    left: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.modal-content p{
+    font-size: 18px !important;
+    text-align: center !important;
+}
+.modal-content p span{
+    font-size: 20px !important;
+    font-weight: 700 !important;
+}
+.close {
+    color: #aaa !important;
+    float: right !important;
+    font-size: 28px !important;
+    font-weight: bold !important;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contact-lotie{
+    width: 100%;
+    height: 300px;
+}
+.contact-rentals{
+    min-height: 0 !important;
+    display: block !important;
+}
+

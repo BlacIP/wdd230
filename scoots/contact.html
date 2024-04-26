@@ -69,17 +69,30 @@
                         <h2> Contact Form </h2>
                         <p> Send us a message and we'll get back to you as soon as we can! </p>
                         <div class="form-block">
-                            <form action="submit-reservation.html" method="get" class="form-details">
-                                <label> Name: <input type="text" id="name" name="name" placeholder="Enter your Name" required></label>
-                                <label> Email <input type="email" id="email" name="email" placeholder="Enter your Email Address" required></label>
+                            <form method="get" class="form-details" onsubmit="return handleFormSubmit();">
+                                <label> <span> Name: </span>  <input type="text" id="name" name="name" placeholder="Enter your Name" required></label>
+                                <label>  <span> Email: </span> <input type="email" id="email" name="email" placeholder="Enter your Email Address" required></label>
                                 <div>
-                                    <label> Your Message </label>
-                                    <textarea name="message" id="message" cols="30" rows="10" required placeholder="Enter your message here..."></textarea>
+                                    <label> <span> Your Message: </span> </label>
+                                    <textarea name="message" id="message" cols="30" rows="3" required placeholder="Enter your message here..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit">Contact us</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                  </div>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div id="lottieAnimation" class="contact-lotie"></div> <!-- Container for Lottie animation -->
+                        <p> <span> Message received. </span> <br> Thank you for contacting Scoots, please Browse through our website to see more of our products!</p>
+                        <div class="reserve-contac-wrapper contact-rentals"> 
+                            <a href="rentals.html">Browse Rentals</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="one">
@@ -147,7 +160,7 @@
         </section>
 
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.4/lottie.min.js"></script>
     <script src="scripts/contacts.js"></script>
     <script src="scripts/getdates.js"></script>
 </body>
