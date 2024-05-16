@@ -780,7 +780,8 @@ input, select {
     padding-bottom: 65px;
   }
   .phone-number-input {
-    display: flex;
+    display: flex !important;
+    flex-direction: row !important;
     align-items: center;
     position: relative;
     width: 100%;
@@ -790,7 +791,8 @@ input, select {
   }
   
   .country-icon {
-    display: flex;
+    display: flex !important;
+    flex-direction: row !important;
     align-items: center;
     padding: 9px 8px;
     /* border: 1px solid #ccc; */
@@ -836,6 +838,7 @@ input, select {
     border-radius: 4px;
     outline: none;
   }
+
   
   .country-list {
     list-style-type: none;
